@@ -196,6 +196,39 @@ section {
     gap: 2rem;
 }
 
+.nav-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.35rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-toggle:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.lang-toggle.active {
+    background: rgba(99, 102, 241, 0.12);
+    border-color: rgba(99, 102, 241, 0.35);
+    color: var(--primary-color);
+}
+
+.lang-sep {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
 .nav-link {
     color: var(--text-primary);
     font-weight: 500;
@@ -297,6 +330,18 @@ section {
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto 2rem;
+}
+
+.hero-meta {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0 auto 0.35rem;
+}
+
+.hero-alias {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0 auto 1.5rem;
 }
 
 .hero-buttons {
@@ -507,6 +552,23 @@ section {
     margin-bottom: 0;
 }
 
+.impact-list {
+    margin: 0.75rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.impact-list li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.impact-tools {
+    margin-top: 0.85rem;
+    margin-bottom: 0;
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
 /* ===================================
    Experience Section
    =================================== */
@@ -590,6 +652,14 @@ section {
 .timeline-content p {
     margin-bottom: 0;
     font-size: 0.95rem;
+}
+
+.timeline-note {
+    max-width: 800px;
+    margin: 1.25rem auto 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 /* ===================================
@@ -783,6 +853,55 @@ section {
     box-shadow: var(--shadow-md);
 }
 
+.contact-cta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.contact-cta .btn {
+    width: auto;
+    flex: 1;
+    min-width: 180px;
+}
+
+.contact-card {
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.contact-card h3 {
+    font-family: var(--font-sans);
+    margin-bottom: 0.75rem;
+}
+
+.contact-card-text {
+    margin-bottom: 0.75rem;
+}
+
+.contact-card-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: rgba(99, 102, 241, 0.05);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
 .form-group {
     margin-bottom: 1.25rem;
 }
@@ -812,6 +931,72 @@ section {
 }
 
 .contact-form .btn {
+    width: 100%;
+}
+
+/* ===================================
+   Modal (Easter egg)
+   =================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 2000;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(6px);
+}
+
+.modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-xl);
+    padding: 2rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.modal-text {
+    margin-top: 0.5rem;
+}
+
+.modal-link {
+    margin-top: 1rem;
     width: 100%;
 }
 
@@ -1000,6 +1185,11 @@ section {
         padding: 1rem 0;
     }
 
+    .nav-lang {
+        justify-content: center;
+        padding-top: 0.5rem;
+    }
+
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
@@ -1055,5 +1245,72 @@ section {
     .footer-links {
         flex-wrap: wrap;
         gap: 1rem;
+    }
+}
+
+/* ===================================
+   Print (A4 / PDF)
+   =================================== */
+@media print {
+    @page {
+        margin: 12mm;
+    }
+
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: #111827 !important;
+    }
+
+    .navbar,
+    .hero-visual,
+    .hero-buttons,
+    .hamburger,
+    .modal {
+        display: none !important;
+    }
+
+    section {
+        padding: 1.5rem 0 !important;
+    }
+
+    .hero {
+        min-height: auto !important;
+        padding: 0 !important;
+        background: white !important;
+    }
+
+    .hero h1 {
+        -webkit-text-fill-color: initial !important;
+        color: #111827 !important;
+    }
+
+    a {
+        color: #111827 !important;
+        text-decoration: underline !important;
+    }
+
+    .section-title::after {
+        display: none !important;
+    }
+
+    .portfolio,
+    .education,
+    .contact {
+        background: white !important;
+    }
+
+    .portfolio-item,
+    .education-item,
+    .timeline-content,
+    .contact-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 }

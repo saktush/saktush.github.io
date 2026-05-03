@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sergey Aktush | Music Producer & Sound Engineer</title>
+    <title>Сергей Блашкевич | Product Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,20 +11,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">SA</a>
+            <a href="#home" class="nav-logo" id="site-logo" aria-label="Home">SA</a>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="manual-amneziavpn.html" class="nav-link">VPN Manual</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Главная</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">Обо мне</a></li>
+                <li><a href="#impact" class="nav-link" data-i18n="nav.impact">Impact</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Опыт</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Навыки</a></li>
+                <li><a href="#education" class="nav-link" data-i18n="nav.education">Образование</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a></li>
+                <li class="nav-lang">
+                    <button class="lang-toggle" type="button" data-lang="ru" aria-label="Русский">RU</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button class="lang-toggle" type="button" data-lang="en" aria-label="English">EN</button>
+                </li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -32,59 +36,57 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Sergey Aktush</h1>
-            <p class="hero-subtitle">Music Producer • Composer • Sound Engineer</p>
-            <p class="hero-description">Crafting sonic experiences that resonate. Over 10 years of expertise in music production, audio engineering, and sound design for film, games, and commercial releases.</p>
+            <h1 data-i18n="hero.name">Сергей Блашкевич</h1>
+            <p class="hero-subtitle" data-i18n="hero.role">Product Engineer • Presales Engineer • Engineering Lead</p>
+            <p class="hero-description" data-i18n="hero.summary">
+                Решаю сложные задачи эффективными методами. Соединяю продукт, аналитику и инженерию: требования, API, автоматизация, процессы, метрики.
+            </p>
+            <p class="hero-meta" data-i18n="hero.meta">Москва • Удалённо/гибрид • Английский B2</p>
+            <p class="hero-alias" data-i18n="hero.alias">aka Sergey Aktush</p>
             <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <button type="button" class="btn btn-primary" id="download-pdf" data-i18n="hero.cta_pdf">Скачать PDF</button>
+                <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Связаться</a>
             </div>
         </div>
-        <div class="hero-visual">
+        <div class="hero-visual" aria-hidden="true">
             <div class="audio-wave">
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
-                <div class="wave-bar"></div>
+                <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
+                <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-i18n="about.title">Обо мне</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <div class="image-placeholder">
+                    <div class="image-placeholder" aria-hidden="true">
                         <i class="fas fa-user-circle"></i>
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3>Crafting Sound Stories Since 2014</h3>
-                    <p>I'm a passionate music producer and sound engineer based in Moscow, with over a decade of experience shaping audio landscapes across multiple genres. My journey began in electronic music production, eventually expanding into film scoring, game audio, and commercial sound design.</p>
-                    <p>My approach combines technical precision with creative intuition, ensuring every project achieves its full sonic potential. I've collaborated with independent artists, major labels, and media production companies, delivering polished, radio-ready productions that stand out in today's competitive market.</p>
+                    <h3 data-i18n="about.heading">Product/Engineering: от требований до результата</h3>
+                    <p data-i18n="about.p1">
+                        Product Engineer с опытом в пресейле и руководстве инженерной группой. Быстро погружаюсь в предметную область, формализую требования, проектирую решения и довожу внедрение до результата.
+                    </p>
+                    <p data-i18n="about.p2">
+                        Мой фокус — сложные продукты и процессы: API/интеграции, автоматизация, документация и обучение, аналитика и метрики, взаимодействие с командами и партнёрами.
+                    </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <span class="stat-number">150+</span>
-                            <span class="stat-label">Projects Completed</span>
+                            <span class="stat-number" data-i18n="stats.years_num">8+</span>
+                            <span class="stat-label" data-i18n="stats.years_label">лет опыта</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Artists Collaborated</span>
+                            <span class="stat-number" data-i18n="stats.focus_num">3</span>
+                            <span class="stat-label" data-i18n="stats.focus_label">product/engineering/presales</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">10</span>
-                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-number" data-i18n="stats.lang_num">B2</span>
+                            <span class="stat-label" data-i18n="stats.lang_label">English</span>
                         </div>
                     </div>
                 </div>
@@ -92,424 +94,334 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="impact" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Portfolio</h2>
-            <p class="section-subtitle">A selection of my recent work across various genres and media</p>
-            
+            <h2 class="section-title" data-i18n="impact.title">Impact</h2>
+            <p class="section-subtitle" data-i18n="impact.subtitle">
+                Коротко о том, что я делал и какой результат приносил — по ролям, без “воды” и выдуманных кейсов.
+            </p>
+
             <div class="portfolio-grid">
-                <!-- Project 1 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-link"><i class="fas fa-play"></i></a>
-                        </div>
+                        <div class="project-placeholder"><i class="fas fa-briefcase"></i></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Neon Dreams</h3>
-                        <p class="project-genre">Electronic / Synthwave</p>
-                        <p class="project-desc">Full album production and mastering for indie artist Luna Wave. Features analog synthesizers and modern production techniques.</p>
+                        <h3 data-i18n="impact.yoonion.title">Yoonion — Ведущий пресейл-инженер</h3>
+                        <p class="project-genre" data-i18n="impact.yoonion.period">Апр 2025 — настоящее время</p>
+                        <div class="project-desc" data-i18n-html="impact.yoonion.bullets">
+                            <ul class="impact-list">
+                                <li>Техническое сопровождение продаж: демо, обучение, пилоты.</li>
+                                <li>Сбор и анализ обратной связи, работа с требованиями и документацией.</li>
+                                <li>Оптимизация процессов и воркфлоу клиентов; подготовка отчётности.</li>
+                                <li>Скрипты автоматизации для типовых задач.</li>
+                            </ul>
+                        </div>
+                        <p class="impact-tools" data-i18n="impact.tools_common">Tools: Python, JavaScript, SQL, REST API</p>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-link"><i class="fas fa-play"></i></a>
-                        </div>
+                        <div class="project-placeholder"><i class="fas fa-sitemap"></i></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Shadow Protocol</h3>
-                        <p class="project-genre">Film Score / Orchestral</p>
-                        <p class="project-desc">Original score for the thriller film "Shadow Protocol". Combines orchestral arrangements with electronic elements.</p>
+                        <h3 data-i18n="impact.digis_lead.title">DIGIS — Руководитель инженерной группы</h3>
+                        <p class="project-genre" data-i18n="impact.digis_lead.period">Сен 2023 — настоящее время</p>
+                        <div class="project-desc" data-i18n-html="impact.digis_lead.bullets">
+                            <ul class="impact-list">
+                                <li>Организация и контроль работы инженерной группы в комплексных системах.</li>
+                                <li>Регламенты/инструкции, структурные схемы; проверка качества документации.</li>
+                                <li>Тестирование API и протоколов, экспертная оценка продуктов.</li>
+                                <li>Внутренние IT-продукты: разработка/поддержка/внедрение.</li>
+                            </ul>
+                        </div>
+                        <p class="impact-tools" data-i18n="impact.tools_digis">Tools: Python, JavaScript, SQL, REST API, Docker, Grafana</p>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-link"><i class="fas fa-play"></i></a>
-                        </div>
+                        <div class="project-placeholder"><i class="fas fa-handshake"></i></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Cyber Realm</h3>
-                        <p class="project-genre">Game Audio / Sound Design</p>
-                        <p class="project-desc">Complete audio package for indie game "Cyber Realm" including ambient tracks, SFX, and character voice processing.</p>
+                        <h3 data-i18n="impact.digis_presales.title">DIGIS — Ведущий пресейл-инженер</h3>
+                        <p class="project-genre" data-i18n="impact.digis_presales.period">Июл 2022 — Сен 2023</p>
+                        <div class="project-desc" data-i18n-html="impact.digis_presales.bullets">
+                            <ul class="impact-list">
+                                <li>Технические консультации партнёров, спецификации и расчёты.</li>
+                                <li>Концептуальные схемы подключений и интеграций.</li>
+                                <li>Изучение и тестирование продуктов (API/протоколы).</li>
+                                <li>Экспертная оценка целесообразности дистрибуции.</li>
+                            </ul>
+                        </div>
+                        <p class="impact-tools" data-i18n="impact.tools_presales">Tools: SQL, REST API, solution design, docs & training</p>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
                 <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-headphones"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-link"><i class="fas fa-play"></i></a>
-                        </div>
+                        <div class="project-placeholder"><i class="fas fa-bolt"></i></div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Urban Pulse</h3>
-                        <p class="project-genre">Hip-Hop / R&B</p>
-                        <p class="project-desc">Production and mixing for emerging hip-hop artist MC Flow. Chart-topping single with over 500K streams.</p>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-broadcast-tower"></i>
+                        <h3 data-i18n="impact.self.title">Самозанятый — Технический директор шоу</h3>
+                        <p class="project-genre" data-i18n="impact.self.period">Авг 2017 — Июл 2022</p>
+                        <div class="project-desc" data-i18n-html="impact.self.bullets">
+                            <ul class="impact-list">
+                                <li>Технические райдеры и стандарты по звуку/свету/видео.</li>
+                                <li>Автоматизация и синхронизация контента (шоу-процессы).</li>
+                                <li>Подрядчики: поиск, согласование, контроль соответствия документации.</li>
+                                <li>Поддержка зарубежных гастролей: переговоры и переводы техдоков.</li>
+                            </ul>
                         </div>
-                        <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-link"><i class="fas fa-play"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Brand Sonic Identity</h3>
-                        <p class="project-genre">Commercial / Branding</p>
-                        <p class="project-desc">Created sonic branding package for tech startup including logo sound, hold music, and commercial audio.</p>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-compact-disc"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <a href="#" class="portfolio-link"><i class="fas fa-play"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Acoustic Sessions</h3>
-                        <p class="project-genre">Acoustic / Folk</p>
-                        <p class="project-desc">Recording and production of intimate acoustic album featuring singer-songwriter Elena Morozova.</p>
+                        <p class="impact-tools" data-i18n="impact.tools_self">Tools: process design, documentation, vendor management</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title" data-i18n="exp.title">Опыт</h2>
             <div class="timeline">
-                <!-- Experience 1 -->
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2022 - Present</span>
-                        <h3>Senior Sound Designer</h3>
-                        <h4>Pixel Forge Studios</h4>
-                        <p>Leading audio production for AAA game titles. Responsible for sound design, implementation, and audio direction across multiple projects.</p>
+                        <span class="timeline-date" data-i18n="exp.yoonion.date">Апр 2025 — настоящее время</span>
+                        <h3 data-i18n="exp.yoonion.role">Ведущий пресейл-инженер</h3>
+                        <h4 data-i18n="exp.yoonion.company">Yoonion</h4>
+                        <p data-i18n="exp.yoonion.desc">Демо, пилоты и обучение; сбор и анализ обратной связи; требования и документация; оптимизация процессов; автоматизация скриптами.</p>
                     </div>
                 </div>
 
-                <!-- Experience 2 -->
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2019 - 2022</span>
-                        <h3>Music Producer & Mixing Engineer</h3>
-                        <h4>Sonic Wave Records</h4>
-                        <p>Produced and mixed over 40 releases for various artists across electronic, pop, and rock genres. Achieved multiple chart positions and streaming milestones.</p>
+                        <span class="timeline-date" data-i18n="exp.digis_lead.date">Сен 2023 — настоящее время</span>
+                        <h3 data-i18n="exp.digis_lead.role">Руководитель инженерной группы</h3>
+                        <h4 data-i18n="exp.digis_lead.company">Цифровые системы, ГК «DIGIS»</h4>
+                        <p data-i18n="exp.digis_lead.desc">Структурный анализ и поддержка партнёров; регламенты/инструкции/схемы; тестирование API/протоколов; внутренние IT-продукты.</p>
                     </div>
                 </div>
 
-                <!-- Experience 3 -->
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2016 - 2019</span>
-                        <h3>Freelance Sound Engineer</h3>
-                        <h4>Self-Employed</h4>
-                        <p>Provided recording, mixing, and mastering services for independent artists and small studios. Built a diverse portfolio across multiple genres.</p>
+                        <span class="timeline-date" data-i18n="exp.digis_presales.date">Июл 2022 — Сен 2023</span>
+                        <h3 data-i18n="exp.digis_presales.role">Ведущий пресейл-инженер (проф. акустика)</h3>
+                        <h4 data-i18n="exp.digis_presales.company">Цифровые системы, ГК «DIGIS»</h4>
+                        <p data-i18n="exp.digis_presales.desc">Технические консультации, спецификации и расчёты; схемы подключений; тестирование продуктов (API/протоколы); экспертная оценка.</p>
                     </div>
                 </div>
 
-                <!-- Experience 4 -->
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2014 - 2016</span>
-                        <h3>Junior Audio Engineer</h3>
-                        <h4>Moscow Recording Studio</h4>
-                        <p>Assisted senior engineers in recording sessions, learned professional studio workflows, and developed foundational skills in audio production.</p>
+                        <span class="timeline-date" data-i18n="exp.self.date">Авг 2017 — Июл 2022</span>
+                        <h3 data-i18n="exp.self.role">Технический директор шоу</h3>
+                        <h4 data-i18n="exp.self.company">Самозанятый</h4>
+                        <p data-i18n="exp.self.desc">Райдеры и документация; технологические решения/автоматизация; подрядчики; зарубежные гастроли (переговоры/переводы).</p>
                     </div>
                 </div>
             </div>
+            <p class="timeline-note" data-i18n="exp.note">Примечание: роли “настоящее время” могут идти параллельно — так отражено в исходном резюме.</p>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="education">
+    <section id="education" class="education">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title" data-i18n="edu.title">Образование</h2>
             <div class="education-grid">
                 <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
                     <div class="education-content">
-                        <h3>Bachelor of Music Technology</h3>
-                        <h4>Moscow State Conservatory</h4>
-                        <p class="education-year">2010 - 2014</p>
-                        <p>Specialized in audio engineering, acoustics, and music composition. Graduated with honors.</p>
+                        <h3 data-i18n="edu.gitr.title">Неоконченное высшее</h3>
+                        <h4 data-i18n="edu.gitr.org">Институт кино и телевидения (ГИТР), Москва</h4>
+                        <p class="education-year" data-i18n="edu.gitr.year">2012</p>
+                        <p data-i18n="edu.gitr.desc">Звукорежиссура кино и телевидения.</p>
                     </div>
                 </div>
                 <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
+                    <div class="education-icon"><i class="fas fa-certificate"></i></div>
                     <div class="education-content">
-                        <h3>Advanced Mixing & Mastering</h3>
-                        <h4>Berklee Online</h4>
-                        <p class="education-year">2017</p>
-                        <p>Professional certification in modern mixing techniques and mastering processes for various genres.</p>
+                        <h3 data-i18n="edu.skillbox.title">Разработчик Python</h3>
+                        <h4 data-i18n="edu.skillbox.org">Skillbox</h4>
+                        <p class="education-year" data-i18n="edu.skillbox.year">2025</p>
+                        <p data-i18n="edu.skillbox.desc">Курс разработчика Python.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Tools</h2>
+            <h2 class="section-title" data-i18n="skills.title">Навыки</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fas fa-sliders-h"></i> DAWs & Software</h3>
+                    <h3><i class="fas fa-code"></i> <span data-i18n="skills.tech.title">Tech</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Ableton Live</span>
-                        <span class="skill-tag">Logic Pro X</span>
-                        <span class="skill-tag">Pro Tools</span>
-                        <span class="skill-tag">FL Studio</span>
-                        <span class="skill-tag">Cubase</span>
-                        <span class="skill-tag">Reaper</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">API testing</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-wave-square"></i> Sound Design</h3>
+                    <h3><i class="fas fa-chart-line"></i> <span data-i18n="skills.product.title">Product</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Serum</span>
-                        <span class="skill-tag">Massive X</span>
-                        <span class="skill-tag">Omnisphere</span>
-                        <span class="skill-tag">Kontakt</span>
-                        <span class="skill-tag">FM8</span>
-                        <span class="skill-tag">Pigments</span>
+                        <span class="skill-tag" data-i18n="skills.product.ba">Бизнес-анализ</span>
+                        <span class="skill-tag" data-i18n="skills.product.req">Анализ требований</span>
+                        <span class="skill-tag" data-i18n="skills.product.metrics">Продуктовые метрики</span>
+                        <span class="skill-tag">A/B tests</span>
+                        <span class="skill-tag">MVP</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-equalizer"></i> Mixing & Mastering</h3>
+                    <h3><i class="fas fa-people-group"></i> <span data-i18n="skills.collab.title">Collaboration</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">FabFilter Pro-Q 3</span>
-                        <span class="skill-tag">Waves Plugins</span>
-                        <span class="skill-tag">iZotope Ozone</span>
-                        <span class="skill-tag">Universal Audio</span>
-                        <span class="skill-tag">Soundtoys</span>
-                        <span class="skill-tag">Valhalla DSP</span>
+                        <span class="skill-tag" data-i18n="skills.collab.cross">Кроссфункциональность</span>
+                        <span class="skill-tag" data-i18n="skills.collab.stakeholders">Управление ожиданиями</span>
+                        <span class="skill-tag" data-i18n="skills.collab.present">Навыки презентации</span>
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Solution design</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-microphone"></i> Recording</h3>
+                    <h3><i class="fas fa-language"></i> <span data-i18n="skills.lang.title">Languages</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Vocal Recording</span>
-                        <span class="skill-tag">Instrument Recording</span>
-                        <span class="skill-tag">Live Recording</span>
-                        <span class="skill-tag">Podcast Production</span>
-                        <span class="skill-tag">Field Recording</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-music"></i> Musical Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Music Theory</span>
-                        <span class="skill-tag">Arrangement</span>
-                        <span class="skill-tag">Composition</span>
-                        <span class="skill-tag">Piano/Keys</span>
-                        <span class="skill-tag">Guitar</span>
-                        <span class="skill-tag">MIDI Programming</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-film"></i> Media Audio</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Film Scoring</span>
-                        <span class="skill-tag">Game Audio</span>
-                        <span class="skill-tag">Sound Effects</span>
-                        <span class="skill-tag">ADR & Dubbing</span>
-                        <span class="skill-tag">Foley Art</span>
-                        <span class="skill-tag">Spatial Audio</span>
+                        <span class="skill-tag" data-i18n="skills.lang.ru">Русский — родной</span>
+                        <span class="skill-tag" data-i18n="skills.lang.en">English — B2</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Ready to bring your audio vision to life? Let's collaborate!</p>
-            
+            <h2 class="section-title" data-i18n="contact.title">Контакты</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Быстрее всего отвечаю в Telegram. Можно писать по делу и сразу с контекстом.</p>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-i18n="contact.email_label">Email</h4>
                             <a href="mailto:sergey.aktush@gmail.com">sergey.aktush@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-telegram"></i>
                         <div>
-                            <h4>Telegram</h4>
-                            <a href="https://t.me/aktush" target="_blank">@aktush</a>
+                            <h4 data-i18n="contact.tg_label">Telegram</h4>
+                            <a href="https://t.me/aktush" target="_blank" rel="noopener noreferrer">@aktush</a>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-soundcloud"></i>
-                        <div>
-                            <h4>SoundCloud</h4>
-                            <a href="#" target="_blank">soundcloud.com/aktush</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h4>LinkedIn</h4>
-                            <a href="#" target="_blank">linkedin.com/in/aktush</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-youtube"></i>
-                        <div>
-                            <h4>YouTube</h4>
-                            <a href="#" target="_blank">youtube.com/@aktushmusic</a>
-                        </div>
+                    <div class="contact-cta">
+                        <button type="button" class="btn btn-primary" id="contact-copy" data-i18n="contact.copy_btn">Скопировать email</button>
+                        <button type="button" class="btn btn-secondary" id="contact-print" data-i18n="contact.print_btn">Версия для печати</button>
                     </div>
                 </div>
-                
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+
+                <div class="contact-card">
+                    <h3 data-i18n="contact.card_title">Короткое резюме</h3>
+                    <p class="contact-card-text" data-i18n="contact.card_p1">
+                        Product Engineer с опытом 8+ лет: пресейл, управление инженерной группой, анализ требований, API/интеграции, автоматизация и документация.
+                    </p>
+                    <p class="contact-card-text" data-i18n="contact.card_p2">
+                        Формат: удалённо / гибрид. Готов к редким командировкам.
+                    </p>
+                    <div class="contact-card-badges">
+                        <span class="badge" data-i18n="badge.role">Product Engineer</span>
+                        <span class="badge" data-i18n="badge.api">API / Integrations</span>
+                        <span class="badge" data-i18n="badge.auto">Automation</span>
+                        <span class="badge" data-i18n="badge.docs">Docs & Training</span>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
                     <span class="logo-text">SA</span>
-                    <p>Music Producer & Sound Engineer</p>
+                    <p data-i18n="footer.tagline">Product Engineer • Presales • Engineering Lead</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home" data-i18n="nav.home">Главная</a>
+                    <a href="#impact" data-i18n="nav.impact">Impact</a>
+                    <a href="#experience" data-i18n="nav.experience">Опыт</a>
+                    <a href="#contact" data-i18n="nav.contact">Контакты</a>
                 </div>
                 <div class="footer-social">
-                    <a href="#" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sergey.aktush@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://t.me/aktush" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Sergey Aktush. All rights reserved.</p>
+                <p data-i18n="footer.copyright">© 2026 Sergey Aktush. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <div class="modal" id="easter-egg-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="easter-egg-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-card" role="document">
+            <button class="modal-close" type="button" aria-label="Close" data-modal-close>
+                <i class="fas fa-xmark"></i>
+            </button>
+            <h3 id="easter-egg-title" data-i18n="easter.title">Secret</h3>
+            <p class="modal-text" data-i18n="easter.desc">Если ты знаешь — ты знаешь.</p>
+            <a class="btn btn-primary modal-link" href="#" id="easter-link" data-i18n="easter.link">Open VPN manual</a>
+        </div>
+    </div>
+
     <script>
-        // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+        function toggleMobileMenu(open) {
+            const willOpen = typeof open === 'boolean' ? open : !navMenu.classList.contains('active');
+            hamburger.classList.toggle('active', willOpen);
+            navMenu.classList.toggle('active', willOpen);
+            hamburger.setAttribute('aria-expanded', String(willOpen));
+        }
+
+        hamburger.addEventListener('click', () => toggleMobileMenu());
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMobileMenu();
+            }
         });
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => toggleMobileMenu(false)));
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Navbar background on scroll
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
         });
 
-        // Form submission (demo)
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, observerOptions);
 
@@ -517,6 +429,380 @@
             section.classList.add('animate-on-scroll');
             observer.observe(section);
         });
+
+        const I18N = {
+            ru: {
+                title: 'Сергей Блашкевич | Product Engineer',
+                'nav.home': 'Главная',
+                'nav.about': 'Обо мне',
+                'nav.impact': 'Impact',
+                'nav.experience': 'Опыт',
+                'nav.skills': 'Навыки',
+                'nav.education': 'Образование',
+                'nav.contact': 'Контакты',
+                'hero.name': 'Сергей Блашкевич',
+                'hero.role': 'Product Engineer • Presales Engineer • Engineering Lead',
+                'hero.summary': 'Решаю сложные задачи эффективными методами. Соединяю продукт, аналитику и инженерию: требования, API, автоматизация, процессы, метрики.',
+                'hero.meta': 'Москва • Удалённо/гибрид • Английский B2',
+                'hero.alias': 'aka Sergey Aktush',
+                'hero.cta_pdf': 'Скачать PDF',
+                'hero.cta_contact': 'Связаться',
+                'about.title': 'Обо мне',
+                'about.heading': 'Product/Engineering: от требований до результата',
+                'about.p1': 'Product Engineer с опытом в пресейле и руководстве инженерной группой. Быстро погружаюсь в предметную область, формализую требования, проектирую решения и довожу внедрение до результата.',
+                'about.p2': 'Мой фокус — сложные продукты и процессы: API/интеграции, автоматизация, документация и обучение, аналитика и метрики, взаимодействие с командами и партнёрами.',
+                'stats.years_num': '8+',
+                'stats.years_label': 'лет опыта',
+                'stats.focus_num': '3',
+                'stats.focus_label': 'product/engineering/presales',
+                'stats.lang_num': 'B2',
+                'stats.lang_label': 'English',
+                'impact.title': 'Impact',
+                'impact.subtitle': 'Коротко о том, что я делал и какой результат приносил — по ролям, без “воды” и выдуманных кейсов.',
+                'impact.yoonion.title': 'Yoonion — Ведущий пресейл-инженер',
+                'impact.yoonion.period': 'Апр 2025 — настоящее время',
+                'impact.yoonion.bullets': `
+                    <ul class="impact-list">
+                        <li>Техническое сопровождение продаж: демо, обучение, пилоты.</li>
+                        <li>Сбор и анализ обратной связи, работа с требованиями и документацией.</li>
+                        <li>Оптимизация процессов и воркфлоу клиентов; подготовка отчётности.</li>
+                        <li>Скрипты автоматизации для типовых задач.</li>
+                    </ul>
+                `,
+                'impact.digis_lead.title': 'DIGIS — Руководитель инженерной группы',
+                'impact.digis_lead.period': 'Сен 2023 — настоящее время',
+                'impact.digis_lead.bullets': `
+                    <ul class="impact-list">
+                        <li>Организация и контроль работы инженерной группы в комплексных системах.</li>
+                        <li>Регламенты/инструкции, структурные схемы; проверка качества документации.</li>
+                        <li>Тестирование API и протоколов, экспертная оценка продуктов.</li>
+                        <li>Внутренние IT-продукты: разработка/поддержка/внедрение.</li>
+                    </ul>
+                `,
+                'impact.digis_presales.title': 'DIGIS — Ведущий пресейл-инженер',
+                'impact.digis_presales.period': 'Июл 2022 — Сен 2023',
+                'impact.digis_presales.bullets': `
+                    <ul class="impact-list">
+                        <li>Технические консультации партнёров, спецификации и расчёты.</li>
+                        <li>Концептуальные схемы подключений и интеграций.</li>
+                        <li>Изучение и тестирование продуктов (API/протоколы).</li>
+                        <li>Экспертная оценка целесообразности дистрибуции.</li>
+                    </ul>
+                `,
+                'impact.self.title': 'Самозанятый — Технический директор шоу',
+                'impact.self.period': 'Авг 2017 — Июл 2022',
+                'impact.self.bullets': `
+                    <ul class="impact-list">
+                        <li>Технические райдеры и стандарты по звуку/свету/видео.</li>
+                        <li>Автоматизация и синхронизация контента (шоу-процессы).</li>
+                        <li>Подрядчики: поиск, согласование, контроль соответствия документации.</li>
+                        <li>Поддержка зарубежных гастролей: переговоры и переводы техдоков.</li>
+                    </ul>
+                `,
+                'impact.tools_common': 'Tools: Python, JavaScript, SQL, REST API',
+                'impact.tools_digis': 'Tools: Python, JavaScript, SQL, REST API, Docker, Grafana',
+                'impact.tools_presales': 'Tools: SQL, REST API, solution design, docs & training',
+                'impact.tools_self': 'Tools: process design, documentation, vendor management',
+                'exp.title': 'Опыт',
+                'exp.yoonion.date': 'Апр 2025 — настоящее время',
+                'exp.yoonion.role': 'Ведущий пресейл-инженер',
+                'exp.yoonion.company': 'Yoonion',
+                'exp.yoonion.desc': 'Демо, пилоты и обучение; сбор и анализ обратной связи; требования и документация; оптимизация процессов; автоматизация скриптами.',
+                'exp.digis_lead.date': 'Сен 2023 — настоящее время',
+                'exp.digis_lead.role': 'Руководитель инженерной группы',
+                'exp.digis_lead.company': 'Цифровые системы, ГК «DIGIS»',
+                'exp.digis_lead.desc': 'Структурный анализ и поддержка партнёров; регламенты/инструкции/схемы; тестирование API/протоколов; внутренние IT-продукты.',
+                'exp.digis_presales.date': 'Июл 2022 — Сен 2023',
+                'exp.digis_presales.role': 'Ведущий пресейл-инженер (проф. акустика)',
+                'exp.digis_presales.company': 'Цифровые системы, ГК «DIGIS»',
+                'exp.digis_presales.desc': 'Технические консультации, спецификации и расчёты; схемы подключений; тестирование продуктов (API/протоколы); экспертная оценка.',
+                'exp.self.date': 'Авг 2017 — Июл 2022',
+                'exp.self.role': 'Технический директор шоу',
+                'exp.self.company': 'Самозанятый',
+                'exp.self.desc': 'Райдеры и документация; технологические решения/автоматизация; подрядчики; зарубежные гастроли (переговоры/переводы).',
+                'exp.note': 'Примечание: роли “настоящее время” могут идти параллельно — так отражено в исходном резюме.',
+                'edu.title': 'Образование',
+                'edu.gitr.title': 'Неоконченное высшее',
+                'edu.gitr.org': 'Институт кино и телевидения (ГИТР), Москва',
+                'edu.gitr.year': '2012',
+                'edu.gitr.desc': 'Звукорежиссура кино и телевидения.',
+                'edu.skillbox.title': 'Разработчик Python',
+                'edu.skillbox.org': 'Skillbox',
+                'edu.skillbox.year': '2025',
+                'edu.skillbox.desc': 'Курс разработчика Python.',
+                'skills.title': 'Навыки',
+                'skills.tech.title': 'Tech',
+                'skills.product.title': 'Product',
+                'skills.product.ba': 'Бизнес-анализ',
+                'skills.product.req': 'Анализ требований',
+                'skills.product.metrics': 'Продуктовые метрики',
+                'skills.collab.title': 'Collaboration',
+                'skills.collab.cross': 'Кроссфункциональность',
+                'skills.collab.stakeholders': 'Управление ожиданиями',
+                'skills.collab.present': 'Навыки презентации',
+                'skills.lang.title': 'Languages',
+                'skills.lang.ru': 'Русский — родной',
+                'skills.lang.en': 'English — B2',
+                'contact.title': 'Контакты',
+                'contact.subtitle': 'Быстрее всего отвечаю в Telegram. Можно писать по делу и сразу с контекстом.',
+                'contact.email_label': 'Email',
+                'contact.tg_label': 'Telegram',
+                'contact.copy_btn': 'Скопировать email',
+                'contact.print_btn': 'Версия для печати',
+                'contact.card_title': 'Короткое резюме',
+                'contact.card_p1': 'Product Engineer с опытом 8+ лет: пресейл, управление инженерной группой, анализ требований, API/интеграции, автоматизация и документация.',
+                'contact.card_p2': 'Формат: удалённо / гибрид. Готов к редким командировкам.',
+                'badge.role': 'Product Engineer',
+                'badge.api': 'API / Integrations',
+                'badge.auto': 'Automation',
+                'badge.docs': 'Docs & Training',
+                'footer.tagline': 'Product Engineer • Presales • Engineering Lead',
+                'footer.copyright': '© 2026 Sergey Aktush. All rights reserved.',
+                'easter.title': 'Secret',
+                'easter.desc': 'Если ты знаешь — ты знаешь.',
+                'easter.link': 'Open VPN manual',
+                toastCopied: 'Скопировано'
+            },
+            en: {
+                title: 'Sergei Blashkevich | Product Engineer',
+                'nav.home': 'Home',
+                'nav.about': 'About',
+                'nav.impact': 'Impact',
+                'nav.experience': 'Experience',
+                'nav.skills': 'Skills',
+                'nav.education': 'Education',
+                'nav.contact': 'Contact',
+                'hero.name': 'Sergei Blashkevich',
+                'hero.role': 'Product Engineer • Presales Engineer • Engineering Lead',
+                'hero.summary': 'I solve complex problems efficiently. I connect product, analytics, and engineering: requirements, APIs, automation, processes, and metrics.',
+                'hero.meta': 'Moscow • Remote/Hybrid • English B2',
+                'hero.alias': 'aka Sergey Aktush',
+                'hero.cta_pdf': 'Download PDF',
+                'hero.cta_contact': 'Contact',
+                'about.title': 'About',
+                'about.heading': 'Product/Engineering: from requirements to delivery',
+                'about.p1': 'Product Engineer with experience in presales and leading an engineering group. I ramp up fast, formalize requirements, design solutions, and drive implementation to results.',
+                'about.p2': 'My focus: complex products and processes — APIs/integrations, automation, documentation and training, analytics and metrics, collaboration with teams and partners.',
+                'stats.years_num': '8+',
+                'stats.years_label': 'years experience',
+                'stats.focus_num': '3',
+                'stats.focus_label': 'product/engineering/presales',
+                'stats.lang_num': 'B2',
+                'stats.lang_label': 'English',
+                'impact.title': 'Impact',
+                'impact.subtitle': 'What I did and the value I delivered — grouped by roles, without made-up case studies.',
+                'impact.yoonion.title': 'Yoonion — Lead Presales Engineer',
+                'impact.yoonion.period': 'Apr 2025 — Present',
+                'impact.yoonion.bullets': `
+                    <ul class="impact-list">
+                        <li>Technical presales: demos, enablement, and pilots.</li>
+                        <li>Collected and analyzed feedback; worked with requirements and documentation.</li>
+                        <li>Optimized customer workflows; prepared progress and effectiveness reports.</li>
+                        <li>Built automation scripts for repeatable tasks.</li>
+                    </ul>
+                `,
+                'impact.digis_lead.title': 'DIGIS — Engineering Group Lead',
+                'impact.digis_lead.period': 'Sep 2023 — Present',
+                'impact.digis_lead.bullets': `
+                    <ul class="impact-list">
+                        <li>Managed an engineering group for complex systems and partner support.</li>
+                        <li>Created standards, instructions, and structural diagrams; reviewed documentation quality.</li>
+                        <li>Tested APIs and interaction protocols; evaluated product feasibility for distribution.</li>
+                        <li>Built and rolled out internal IT products and tools.</li>
+                    </ul>
+                `,
+                'impact.digis_presales.title': 'DIGIS — Lead Presales Engineer (Pro audio)',
+                'impact.digis_presales.period': 'Jul 2022 — Sep 2023',
+                'impact.digis_presales.bullets': `
+                    <ul class="impact-list">
+                        <li>Partner consulting; specs and calculations; conceptual connectivity designs.</li>
+                        <li>Researched and tested complex products (APIs, protocols, control).</li>
+                        <li>Provided expert evaluation for distribution decisions.</li>
+                        <li>Maintained up-to-date knowledge across a wide vendor portfolio.</li>
+                    </ul>
+                `,
+                'impact.self.title': 'Self-employed — Technical Director (Show industry)',
+                'impact.self.period': 'Aug 2017 — Jul 2022',
+                'impact.self.bullets': `
+                    <ul class="impact-list">
+                        <li>Owned technical riders/standards for sound, lighting, and video.</li>
+                        <li>Designed solutions for show operations; synchronization and automation.</li>
+                        <li>Vendor sourcing, negotiations, and compliance control with documentation.</li>
+                        <li>International tours: negotiations and technical document translation/support.</li>
+                    </ul>
+                `,
+                'impact.tools_common': 'Tools: Python, JavaScript, SQL, REST API',
+                'impact.tools_digis': 'Tools: Python, JavaScript, SQL, REST API, Docker, Grafana',
+                'impact.tools_presales': 'Tools: SQL, REST API, solution design, docs & training',
+                'impact.tools_self': 'Tools: process design, documentation, vendor management',
+                'exp.title': 'Experience',
+                'exp.yoonion.date': 'Apr 2025 — Present',
+                'exp.yoonion.role': 'Lead Presales Engineer',
+                'exp.yoonion.company': 'Yoonion',
+                'exp.yoonion.desc': 'Demos, pilots and enablement; feedback analysis; requirements and documentation; process optimization; automation scripts.',
+                'exp.digis_lead.date': 'Sep 2023 — Present',
+                'exp.digis_lead.role': 'Engineering Group Lead',
+                'exp.digis_lead.company': 'Digital Systems, DIGIS Group',
+                'exp.digis_lead.desc': 'Structural analysis and partner support; standards/instructions/diagrams; API/protocol testing; internal IT products.',
+                'exp.digis_presales.date': 'Jul 2022 — Sep 2023',
+                'exp.digis_presales.role': 'Lead Presales Engineer (Pro audio)',
+                'exp.digis_presales.company': 'Digital Systems, DIGIS Group',
+                'exp.digis_presales.desc': 'Consulting, specs and calculations; connectivity designs; testing complex products (APIs/protocols); expert evaluations.',
+                'exp.self.date': 'Aug 2017 — Jul 2022',
+                'exp.self.role': 'Technical Director (Show industry)',
+                'exp.self.company': 'Self-employed',
+                'exp.self.desc': 'Riders and documentation; automation and synchronization; vendor management; international tours (negotiations/translations).',
+                'exp.note': 'Note: “Present” roles may overlap — kept as in the source resume.',
+                'edu.title': 'Education',
+                'edu.gitr.title': 'Incomplete higher education',
+                'edu.gitr.org': 'GITR Institute of Cinema and Television, Moscow',
+                'edu.gitr.year': '2012',
+                'edu.gitr.desc': 'Film/TV sound engineering.',
+                'edu.skillbox.title': 'Python Developer',
+                'edu.skillbox.org': 'Skillbox',
+                'edu.skillbox.year': '2025',
+                'edu.skillbox.desc': 'Python developer program.',
+                'skills.title': 'Skills',
+                'skills.tech.title': 'Tech',
+                'skills.product.title': 'Product',
+                'skills.product.ba': 'Business analysis',
+                'skills.product.req': 'Requirements analysis',
+                'skills.product.metrics': 'Product metrics',
+                'skills.collab.title': 'Collaboration',
+                'skills.collab.cross': 'Cross-functional work',
+                'skills.collab.stakeholders': 'Stakeholder management',
+                'skills.collab.present': 'Presentation skills',
+                'skills.lang.title': 'Languages',
+                'skills.lang.ru': 'Russian — native',
+                'skills.lang.en': 'English — B2',
+                'contact.title': 'Contact',
+                'contact.subtitle': 'Fastest response on Telegram. Feel free to reach out with context.',
+                'contact.email_label': 'Email',
+                'contact.tg_label': 'Telegram',
+                'contact.copy_btn': 'Copy email',
+                'contact.print_btn': 'Print-friendly',
+                'contact.card_title': 'Quick summary',
+                'contact.card_p1': 'Product Engineer with 8+ years: presales, engineering leadership, requirements analysis, APIs/integrations, automation, and documentation.',
+                'contact.card_p2': 'Work mode: remote / hybrid. Open to occasional travel.',
+                'badge.role': 'Product Engineer',
+                'badge.api': 'API / Integrations',
+                'badge.auto': 'Automation',
+                'badge.docs': 'Docs & Training',
+                'footer.tagline': 'Product Engineer • Presales • Engineering Lead',
+                'footer.copyright': '© 2026 Sergey Aktush. All rights reserved.',
+                'easter.title': 'Secret',
+                'easter.desc': 'If you know, you know.',
+                'easter.link': 'Open VPN manual',
+                toastCopied: 'Copied'
+            }
+        };
+
+        function applyI18n(lang) {
+            const dict = I18N[lang] || I18N.ru;
+            document.title = dict.title;
+            document.documentElement.lang = lang === 'en' ? 'en' : 'ru';
+
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key] != null) el.textContent = dict[key];
+            });
+
+            document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+                const key = el.getAttribute('data-i18n-html');
+                if (dict[key] != null) el.innerHTML = dict[key];
+            });
+
+            document.querySelectorAll('.lang-toggle').forEach((btn) => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+        }
+
+        const LANG_STORAGE_KEY = 'cv_lang';
+        const initialLang = localStorage.getItem(LANG_STORAGE_KEY) || 'ru';
+        applyI18n(initialLang);
+
+        document.querySelectorAll('.lang-toggle').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                localStorage.setItem(LANG_STORAGE_KEY, lang);
+                applyI18n(lang);
+            });
+        });
+
+        const downloadPdfBtn = document.getElementById('download-pdf');
+        if (downloadPdfBtn) downloadPdfBtn.addEventListener('click', () => window.print());
+        const contactPrintBtn = document.getElementById('contact-print');
+        if (contactPrintBtn) contactPrintBtn.addEventListener('click', () => window.print());
+
+        const contactCopyBtn = document.getElementById('contact-copy');
+        if (contactCopyBtn) {
+            contactCopyBtn.addEventListener('click', async () => {
+                const email = 'sergey.aktush@gmail.com';
+                try {
+                    await navigator.clipboard.writeText(email);
+                    contactCopyBtn.classList.add('copied');
+                    const oldText = contactCopyBtn.textContent;
+                    contactCopyBtn.textContent = (I18N[localStorage.getItem(LANG_STORAGE_KEY) || 'ru'] || I18N.ru).toastCopied;
+                    setTimeout(() => {
+                        contactCopyBtn.classList.remove('copied');
+                        contactCopyBtn.textContent = oldText;
+                    }, 1200);
+                } catch (_) {
+                    window.prompt('Copy email:', email);
+                }
+            });
+        }
+
+        const logo = document.getElementById('site-logo');
+        const modal = document.getElementById('easter-egg-modal');
+        const easterLink = document.getElementById('easter-link');
+        let clickCount = 0;
+        let clickResetTimer = null;
+        const REQUIRED_CLICKS = 7;
+        const RESET_AFTER_MS = 1200;
+
+        function openModal() {
+            if (!modal) return;
+            // Keep the destination out of the HTML to make it less obvious in view-source.
+            if (easterLink) {
+                const secretHref = String.fromCharCode(
+                    109,97,110,117,97,108,45,97,109,110,101,122,105,97,118,112,110,46,104,116,109,108
+                );
+                easterLink.setAttribute('href', secretHref);
+            }
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+            const focusable = modal.querySelector('a, button');
+            if (focusable) focusable.focus();
+        }
+        function closeModal() {
+            if (!modal) return;
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        if (logo) {
+            logo.addEventListener('click', () => {
+                clickCount += 1;
+                if (clickResetTimer) clearTimeout(clickResetTimer);
+                clickResetTimer = setTimeout(() => { clickCount = 0; }, RESET_AFTER_MS);
+                if (clickCount >= REQUIRED_CLICKS) {
+                    clickCount = 0;
+                    clearTimeout(clickResetTimer);
+                    openModal();
+                }
+            });
+        }
+
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                const target = e.target;
+                if (target && target.closest && target.closest('[data-modal-close]')) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+        }
     </script>
 </body>
 </html>
