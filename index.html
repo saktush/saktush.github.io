@@ -3,387 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сергей Блашкевич | Product Engineer</title>
+    <title>Сергей Блашкевич | Product / AI Engineer</title>
+    <meta name="description" content="Product Engineer for AI, automation, integrations, and internal tools.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo" id="site-logo" aria-label="Home">SA</a>
+            <a href="#home" class="nav-logo" id="site-logo" aria-label="Home">
+                SA<span class="secret-dot" aria-hidden="true"></span>
+            </a>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link" data-i18n="nav.home">Главная</a></li>
-                <li><a href="#about" class="nav-link" data-i18n="nav.about">Обо мне</a></li>
-                <li><a href="#impact" class="nav-link" data-i18n="nav.impact">Impact</a></li>
+                <li><a href="#work" class="nav-link" data-i18n="nav.work">Кейсы</a></li>
+                <li><a href="#approach" class="nav-link" data-i18n="nav.approach">Подход</a></li>
                 <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Опыт</a></li>
-                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Навыки</a></li>
-                <li><a href="#education" class="nav-link" data-i18n="nav.education">Образование</a></li>
                 <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a></li>
                 <li class="nav-lang">
                     <button class="lang-toggle" type="button" data-lang="ru" aria-label="Русский">RU</button>
-                    <span class="lang-sep" aria-hidden="true">/</span>
                     <button class="lang-toggle" type="button" data-lang="en" aria-label="English">EN</button>
                 </li>
             </ul>
-            <div class="hamburger" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+            <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 data-i18n="hero.name">Сергей Блашкевич</h1>
-            <p class="hero-subtitle" data-i18n="hero.role">Product Engineer • Presales Engineer • Engineering Lead</p>
-            <p class="hero-description" data-i18n="hero.summary">
-                Решаю сложные задачи эффективными методами. Соединяю продукт, аналитику и инженерию: требования, API, автоматизация, процессы, метрики.
-            </p>
-            <p class="hero-meta" data-i18n="hero.meta">Москва • Удалённо/гибрид • Английский B2</p>
-            <p class="hero-alias" data-i18n="hero.alias">aka Sergey Aktush</p>
-            <div class="hero-buttons">
-                <button type="button" class="btn btn-primary" id="download-pdf" data-i18n="hero.cta_pdf">Скачать PDF</button>
-                <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta_contact">Связаться</a>
-            </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-            <div class="audio-wave">
-                <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-                <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title" data-i18n="about.title">Обо мне</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder" aria-hidden="true">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h3 data-i18n="about.heading">Product/Engineering: от требований до результата</h3>
-                    <p data-i18n="about.p1">
-                        Product Engineer с опытом в пресейле и руководстве инженерной группой. Быстро погружаюсь в предметную область, формализую требования, проектирую решения и довожу внедрение до результата.
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow" data-i18n="hero.eyebrow">Product / AI Engineer · Moscow · Remote / Hybrid</p>
+                    <h1 data-i18n="hero.title">Делаю внутренние продукты на стыке AI, автоматизации и интеграций.</h1>
+                    <p class="hero-description" data-i18n="hero.summary">
+                        Помогаю командам быстро пройти путь от неясной идеи до работающего инструмента: уточняю задачу, проектирую API и процессы, собираю решение и довожу его до реального использования.
                     </p>
-                    <p data-i18n="about.p2">
-                        Мой фокус — сложные продукты и процессы: API/интеграции, автоматизация, документация и обучение, аналитика и метрики, взаимодействие с командами и партнёрами.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number" data-i18n="stats.years_num">8+</span>
-                            <span class="stat-label" data-i18n="stats.years_label">лет опыта</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-i18n="stats.focus_num">3</span>
-                            <span class="stat-label" data-i18n="stats.focus_label">product/engineering/presales</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number" data-i18n="stats.lang_num">B2</span>
-                            <span class="stat-label" data-i18n="stats.lang_label">English</span>
-                        </div>
+                    <div class="hero-tags" aria-label="Core skills">
+                        <span data-i18n="tag.ai">AI analysis</span>
+                        <span data-i18n="tag.automation">Automation</span>
+                        <span data-i18n="tag.integrations">API / Integrations</span>
+                        <span data-i18n="tag.internal">Internal tools</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#work" class="btn btn-primary"><i class="fas fa-layer-group"></i><span data-i18n="hero.cta_work">Смотреть кейсы</span></a>
+                        <button type="button" class="btn btn-secondary" id="download-pdf"><i class="fas fa-file-arrow-down"></i><span data-i18n="hero.cta_pdf">PDF / печать</span></button>
+                    </div>
+                </div>
+
+                <div class="system-visual" aria-label="Generated system visual">
+                    <div class="visual-toolbar">
+                        <span></span><span></span><span></span>
+                        <strong>ops.ai</strong>
+                    </div>
+                    <div class="signal-map">
+                        <div class="signal-node node-a"><i class="fas fa-comments"></i><span>chat</span></div>
+                        <div class="signal-node node-b"><i class="fas fa-database"></i><span>data</span></div>
+                        <div class="signal-node node-c"><i class="fas fa-brain"></i><span>llm</span></div>
+                        <div class="signal-node node-d"><i class="fas fa-gears"></i><span>api</span></div>
+                        <svg viewBox="0 0 520 320" role="img" aria-hidden="true">
+                            <path d="M90 76 C170 42 238 82 308 122 S404 182 454 102" />
+                            <path d="M112 236 C184 178 226 220 286 162 S386 88 438 218" />
+                            <path d="M146 112 C196 150 212 184 258 202 S354 238 400 182" />
+                        </svg>
+                    </div>
+                    <div class="visual-console">
+                        <p><span>01</span> collect context</p>
+                        <p><span>02</span> map workflow</p>
+                        <p><span>03</span> ship tool</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="impact" class="portfolio">
-        <div class="container">
-            <h2 class="section-title" data-i18n="impact.title">Impact</h2>
-            <p class="section-subtitle" data-i18n="impact.subtitle">
-                Коротко о том, что я делал и какой результат приносил — по ролям, без “воды” и выдуманных кейсов.
-            </p>
+        <section class="intro">
+            <div class="container intro-grid">
+                <div>
+                    <p class="section-kicker" data-i18n="intro.kicker">Коротко</p>
+                    <h2 data-i18n="intro.title">Лучше всего работаю там, где нужно навести порядок в сложной задаче и собрать работающую систему.</h2>
+                </div>
+                <div class="intro-copy">
+                    <p data-i18n="intro.p1">Без лишней бюрократии: собрать факты, согласовать критерии результата, запустить первую версию и улучшать ее по обратной связи.</p>
+                    <p data-i18n="intro.p2">За 8+ лет прошел путь от технического директора шоу до пресейла, руководства инженерной группой и разработки внутренних инструментов на Python, JavaScript, SQL, REST API и AI.</p>
+                </div>
+            </div>
+        </section>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder"><i class="fas fa-briefcase"></i></div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 data-i18n="impact.yoonion.title">Yoonion — Ведущий пресейл-инженер</h3>
-                        <p class="project-genre" data-i18n="impact.yoonion.period">Апр 2025 — настоящее время</p>
-                        <div class="project-desc" data-i18n-html="impact.yoonion.bullets">
-                            <ul class="impact-list">
-                                <li>Техническое сопровождение продаж: демо, обучение, пилоты.</li>
-                                <li>Сбор и анализ обратной связи, работа с требованиями и документацией.</li>
-                                <li>Оптимизация процессов и воркфлоу клиентов; подготовка отчётности.</li>
-                                <li>Скрипты автоматизации для типовых задач.</li>
-                            </ul>
-                        </div>
-                        <p class="impact-tools" data-i18n="impact.tools_common">Tools: Python, JavaScript, SQL, REST API</p>
-                    </div>
+        <section id="work" class="work">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker" data-i18n="work.kicker">Selected Work</p>
+                    <h2 data-i18n="work.title">Кейсы из рабочих и приватных проектов в публичном формате.</h2>
+                    <p data-i18n="work.subtitle">Без закрытых деталей: только задача, подход и практический результат.</p>
                 </div>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder"><i class="fas fa-sitemap"></i></div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 data-i18n="impact.digis_lead.title">DIGIS — Руководитель инженерной группы</h3>
-                        <p class="project-genre" data-i18n="impact.digis_lead.period">Сен 2023 — настоящее время</p>
-                        <div class="project-desc" data-i18n-html="impact.digis_lead.bullets">
-                            <ul class="impact-list">
-                                <li>Организация и контроль работы инженерной группы в комплексных системах.</li>
-                                <li>Регламенты/инструкции, структурные схемы; проверка качества документации.</li>
-                                <li>Тестирование API и протоколов, экспертная оценка продуктов.</li>
-                                <li>Внутренние IT-продукты: разработка/поддержка/внедрение.</li>
-                            </ul>
-                        </div>
-                        <p class="impact-tools" data-i18n="impact.tools_digis">Tools: Python, JavaScript, SQL, REST API, Docker, Grafana</p>
-                    </div>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <div class="case-meta"><span>AI Ops</span><span>Python · Telegram · Ollama</span></div>
+                        <h3 data-i18n="case.telegram.title">AI-анализ рабочих Telegram-чатов</h3>
+                        <p data-i18n="case.telegram.desc">Инструмент выгружает историю чатов, бережно обходит лимиты Telegram, считает активность и формирует AI-отчеты по требованиям, рискам и незакрытым темам.</p>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-meta"><span>Knowledge</span><span>FastAPI · LangChain · Elasticsearch</span></div>
+                        <h3 data-i18n="case.knowledge.title">Ассистент по внутренней документации</h3>
+                        <p data-i18n="case.knowledge.desc">RAG-контур: парсинг, очистка, индексация базы знаний и интерфейс вопрос-ответ для команды, которой нужен быстрый доступ к документации.</p>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-meta"><span>Data Export</span><span>REST API · CSV · JSON</span></div>
+                        <h3 data-i18n="case.redmine.title">Экспорт и нормализация данных из трекера</h3>
+                        <p data-i18n="case.redmine.desc">Слой моделей и экспортеров для выгрузки задач, проектов, пользователей, времени и связей в форматы для аналитики, миграций и отчетности.</p>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-meta"><span>Hardware API</span><span>UDP · DSP · Python</span></div>
+                        <h3 data-i18n="case.dsp.title">Remote-control tooling для DSP-процессоров</h3>
+                        <p data-i18n="case.dsp.desc">Драйвер и примеры управления аудиопроцессорами: уровни, mute, матрица маршрутизации, опрос состояния и команды по протоколу устройства.</p>
+                    </article>
+                    <article class="case-card">
+                        <div class="case-meta"><span>Bot Product</span><span>Telegram · API · DB</span></div>
+                        <h3 data-i18n="case.bot.title">Каталог продуктов внутри Telegram</h3>
+                        <p data-i18n="case.bot.desc">Бот для поиска, навигации и показа карточек товаров из внешнего API с локальным кешем и понятной кнопочной логикой.</p>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder"><i class="fas fa-handshake"></i></div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 data-i18n="impact.digis_presales.title">DIGIS — Ведущий пресейл-инженер</h3>
-                        <p class="project-genre" data-i18n="impact.digis_presales.period">Июл 2022 — Сен 2023</p>
-                        <div class="project-desc" data-i18n-html="impact.digis_presales.bullets">
-                            <ul class="impact-list">
-                                <li>Технические консультации партнёров, спецификации и расчёты.</li>
-                                <li>Концептуальные схемы подключений и интеграций.</li>
-                                <li>Изучение и тестирование продуктов (API/протоколы).</li>
-                                <li>Экспертная оценка целесообразности дистрибуции.</li>
-                            </ul>
-                        </div>
-                        <p class="impact-tools" data-i18n="impact.tools_presales">Tools: SQL, REST API, solution design, docs & training</p>
-                    </div>
+        <section id="approach" class="approach">
+            <div class="container">
+                <div class="section-head compact">
+                    <p class="section-kicker" data-i18n="approach.kicker">What I Bring</p>
+                    <h2 data-i18n="approach.title">Быстро преарщаю идеи в продукт</h2>
                 </div>
+                <div class="capability-grid">
+                    <div class="capability"><i class="fas fa-magnifying-glass-chart"></i><h3 data-i18n="cap.discovery.title">Discovery без лишнего</h3><p data-i18n="cap.discovery.desc">Быстро фиксирую контекст, ограничения и критерии результата. Дальше собираю первый рабочий контур.</p></div>
+                    <div class="capability"><i class="fas fa-plug-circle-bolt"></i><h3 data-i18n="cap.integration.title">API и интеграции</h3><p data-i18n="cap.integration.desc">Разбираю протоколы, проверяю поведение, собираю понятные схемы и устойчивые интеграционные потоки.</p></div>
+                    <div class="capability"><i class="fas fa-robot"></i><h3 data-i18n="cap.ai.title">AI как рабочий инструмент</h3><p data-i18n="cap.ai.desc">Применяю LLM там, где это ускоряет работу: анализ переписок, поиск знаний, отчеты и внутренние помощники.</p></div>
+                    <div class="capability"><i class="fas fa-people-arrows"></i><h3 data-i18n="cap.lead.title">Стыковка команд</h3><p data-i18n="cap.lead.desc">Помогаю продажам, инженерам и пользователям говорить на одном языке, чтобы решения принимались быстрее и точнее.</p></div>
+                </div>
+            </div>
+        </section>
 
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="project-placeholder"><i class="fas fa-bolt"></i></div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3 data-i18n="impact.self.title">Самозанятый — Технический директор шоу</h3>
-                        <p class="project-genre" data-i18n="impact.self.period">Авг 2017 — Июл 2022</p>
-                        <div class="project-desc" data-i18n-html="impact.self.bullets">
-                            <ul class="impact-list">
-                                <li>Технические райдеры и стандарты по звуку/свету/видео.</li>
-                                <li>Автоматизация и синхронизация контента (шоу-процессы).</li>
-                                <li>Подрядчики: поиск, согласование, контроль соответствия документации.</li>
-                                <li>Поддержка зарубежных гастролей: переговоры и переводы техдоков.</li>
-                            </ul>
-                        </div>
-                        <p class="impact-tools" data-i18n="impact.tools_self">Tools: process design, documentation, vendor management</p>
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-head compact">
+                    <p class="section-kicker" data-i18n="exp.kicker">Experience</p>
+                    <h2 data-i18n="exp.title">Опыт без лишней формальности.</h2>
+                </div>
+                <div class="experience-list">
+                    <article class="experience-row">
+                        <span data-i18n="exp.yoonion.date">2025 — сейчас</span>
+                        <div><h3 data-i18n="exp.yoonion.role">Lead Presales Engineer · Yoonion</h3><p data-i18n="exp.yoonion.desc">Демо, пилоты, обучение, сбор требований, цикл обратной связи, документация, клиентские процессы и автоматизация повторяемых задач.</p></div>
+                    </article>
+                    <article class="experience-row">
+                        <span data-i18n="exp.digis_lead.date">2023 — сейчас</span>
+                        <div><h3 data-i18n="exp.digis_lead.role">Engineering Group Lead · DIGIS</h3><p data-i18n="exp.digis_lead.desc">Управление инженерной группой, внутренние IT-продукты, тестирование API и протоколов, схемы, регламенты и экспертная оценка решений.</p></div>
+                    </article>
+                    <article class="experience-row">
+                        <span data-i18n="exp.digis_pre.date">2022 — 2023</span>
+                        <div><h3 data-i18n="exp.digis_pre.role">Lead Presales Engineer · Pro Audio</h3><p data-i18n="exp.digis_pre.desc">Технические консультации, спецификации, акустические расчёты, концептуальные схемы подключений и поддержка партнёров.</p></div>
+                    </article>
+                    <article class="experience-row">
+                        <span data-i18n="exp.show.date">2017 — 2022</span>
+                        <div><h3 data-i18n="exp.show.role">Technical Director · Show Industry</h3><p data-i18n="exp.show.desc">Технические райдеры, звук/свет/видео, синхронизация контента, подрядчики, зарубежные туры и технические переговоры.</p></div>
+                    </article>
+                </div>
+                <p class="credibility" data-i18n="exp.credentials">Образование: звукорежиссура кино и телевидения, ГИТР. Курс Python Developer, Skillbox. English B2.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
+                    <h2 data-i18n="contact.title">Можно писать сразу с контекстом задачи.</h2>
+                    <p data-i18n="contact.subtitle">Быстрее всего отвечаю в Telegram. Интересны продуктовые инженерные задачи, AI-инструменты, интеграции и внутренние системы.</p>
+                </div>
+                <div class="contact-panel">
+                    <a class="contact-line" href="https://t.me/aktush" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i><span>@aktush</span></a>
+                    <a class="contact-line" href="mailto:sergey.aktush@gmail.com"><i class="fas fa-envelope"></i><span>sergey.aktush@gmail.com</span></a>
+                    <div class="contact-actions">
+                        <button type="button" class="btn btn-primary" id="contact-copy"><i class="fas fa-copy"></i><span data-i18n="contact.copy">Скопировать email</span></button>
+                        <button type="button" class="btn btn-secondary" id="contact-print"><i class="fas fa-print"></i><span data-i18n="contact.print">Печать</span></button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title" data-i18n="exp.title">Опыт</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date" data-i18n="exp.yoonion.date">Апр 2025 — настоящее время</span>
-                        <h3 data-i18n="exp.yoonion.role">Ведущий пресейл-инженер</h3>
-                        <h4 data-i18n="exp.yoonion.company">Yoonion</h4>
-                        <p data-i18n="exp.yoonion.desc">Демо, пилоты и обучение; сбор и анализ обратной связи; требования и документация; оптимизация процессов; автоматизация скриптами.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date" data-i18n="exp.digis_lead.date">Сен 2023 — настоящее время</span>
-                        <h3 data-i18n="exp.digis_lead.role">Руководитель инженерной группы</h3>
-                        <h4 data-i18n="exp.digis_lead.company">Цифровые системы, ГК «DIGIS»</h4>
-                        <p data-i18n="exp.digis_lead.desc">Структурный анализ и поддержка партнёров; регламенты/инструкции/схемы; тестирование API/протоколов; внутренние IT-продукты.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date" data-i18n="exp.digis_presales.date">Июл 2022 — Сен 2023</span>
-                        <h3 data-i18n="exp.digis_presales.role">Ведущий пресейл-инженер (проф. акустика)</h3>
-                        <h4 data-i18n="exp.digis_presales.company">Цифровые системы, ГК «DIGIS»</h4>
-                        <p data-i18n="exp.digis_presales.desc">Технические консультации, спецификации и расчёты; схемы подключений; тестирование продуктов (API/протоколы); экспертная оценка.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date" data-i18n="exp.self.date">Авг 2017 — Июл 2022</span>
-                        <h3 data-i18n="exp.self.role">Технический директор шоу</h3>
-                        <h4 data-i18n="exp.self.company">Самозанятый</h4>
-                        <p data-i18n="exp.self.desc">Райдеры и документация; технологические решения/автоматизация; подрядчики; зарубежные гастроли (переговоры/переводы).</p>
-                    </div>
-                </div>
-            </div>
-            <p class="timeline-note" data-i18n="exp.note">Примечание: роли “настоящее время” могут идти параллельно — так отражено в исходном резюме.</p>
-        </div>
-    </section>
-
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title" data-i18n="edu.title">Образование</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="education-content">
-                        <h3 data-i18n="edu.gitr.title">Неоконченное высшее</h3>
-                        <h4 data-i18n="edu.gitr.org">Институт кино и телевидения (ГИТР), Москва</h4>
-                        <p class="education-year" data-i18n="edu.gitr.year">2012</p>
-                        <p data-i18n="edu.gitr.desc">Звукорежиссура кино и телевидения.</p>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="education-content">
-                        <h3 data-i18n="edu.skillbox.title">Разработчик Python</h3>
-                        <h4 data-i18n="edu.skillbox.org">Skillbox</h4>
-                        <p class="education-year" data-i18n="edu.skillbox.year">2025</p>
-                        <p data-i18n="edu.skillbox.desc">Курс разработчика Python.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title" data-i18n="skills.title">Навыки</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> <span data-i18n="skills.tech.title">Tech</span></h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Grafana</span>
-                        <span class="skill-tag">API testing</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> <span data-i18n="skills.product.title">Product</span></h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-i18n="skills.product.ba">Бизнес-анализ</span>
-                        <span class="skill-tag" data-i18n="skills.product.req">Анализ требований</span>
-                        <span class="skill-tag" data-i18n="skills.product.metrics">Продуктовые метрики</span>
-                        <span class="skill-tag">A/B tests</span>
-                        <span class="skill-tag">MVP</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-people-group"></i> <span data-i18n="skills.collab.title">Collaboration</span></h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-i18n="skills.collab.cross">Кроссфункциональность</span>
-                        <span class="skill-tag" data-i18n="skills.collab.stakeholders">Управление ожиданиями</span>
-                        <span class="skill-tag" data-i18n="skills.collab.present">Навыки презентации</span>
-                        <span class="skill-tag">Agile</span>
-                        <span class="skill-tag">Solution design</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-language"></i> <span data-i18n="skills.lang.title">Languages</span></h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag" data-i18n="skills.lang.ru">Русский — родной</span>
-                        <span class="skill-tag" data-i18n="skills.lang.en">English — B2</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-i18n="contact.title">Контакты</h2>
-            <p class="section-subtitle" data-i18n="contact.subtitle">Быстрее всего отвечаю в Telegram. Можно писать по делу и сразу с контекстом.</p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4 data-i18n="contact.email_label">Email</h4>
-                            <a href="mailto:sergey.aktush@gmail.com">sergey.aktush@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-telegram"></i>
-                        <div>
-                            <h4 data-i18n="contact.tg_label">Telegram</h4>
-                            <a href="https://t.me/aktush" target="_blank" rel="noopener noreferrer">@aktush</a>
-                        </div>
-                    </div>
-                    <div class="contact-cta">
-                        <button type="button" class="btn btn-primary" id="contact-copy" data-i18n="contact.copy_btn">Скопировать email</button>
-                        <button type="button" class="btn btn-secondary" id="contact-print" data-i18n="contact.print_btn">Версия для печати</button>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <h3 data-i18n="contact.card_title">Короткое резюме</h3>
-                    <p class="contact-card-text" data-i18n="contact.card_p1">
-                        Product Engineer с опытом 8+ лет: пресейл, управление инженерной группой, анализ требований, API/интеграции, автоматизация и документация.
-                    </p>
-                    <p class="contact-card-text" data-i18n="contact.card_p2">
-                        Формат: удалённо / гибрид. Готов к редким командировкам.
-                    </p>
-                    <div class="contact-card-badges">
-                        <span class="badge" data-i18n="badge.role">Product Engineer</span>
-                        <span class="badge" data-i18n="badge.api">API / Integrations</span>
-                        <span class="badge" data-i18n="badge.auto">Automation</span>
-                        <span class="badge" data-i18n="badge.docs">Docs & Training</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">SA</span>
-                    <p data-i18n="footer.tagline">Product Engineer • Presales • Engineering Lead</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home" data-i18n="nav.home">Главная</a>
-                    <a href="#impact" data-i18n="nav.impact">Impact</a>
-                    <a href="#experience" data-i18n="nav.experience">Опыт</a>
-                    <a href="#contact" data-i18n="nav.contact">Контакты</a>
-                </div>
-                <div class="footer-social">
-                    <a href="mailto:sergey.aktush@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://t.me/aktush" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p data-i18n="footer.copyright">© 2026 Sergey Aktush. All rights reserved.</p>
-            </div>
+        <div class="container footer-inner">
+            <span>Sergey Aktush</span>
+            <span data-i18n="footer.line">Product / AI Engineer · automation · integrations · internal tools</span>
         </div>
     </footer>
 
     <div class="modal" id="easter-egg-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="easter-egg-title">
         <div class="modal-backdrop" data-modal-close></div>
         <div class="modal-card" role="document">
-            <button class="modal-close" type="button" aria-label="Close" data-modal-close>
-                <i class="fas fa-xmark"></i>
-            </button>
-            <h3 id="easter-egg-title" data-i18n="easter.title">Secret</h3>
-            <p class="modal-text" data-i18n="easter.desc">Если ты знаешь — ты знаешь.</p>
-            <a class="btn btn-primary modal-link" href="#" id="easter-link" data-i18n="easter.link">Open VPN manual</a>
+            <button class="modal-close" type="button" aria-label="Close" data-modal-close><i class="fas fa-xmark"></i></button>
+            <p class="section-kicker" data-i18n="easter.kicker">Hidden Note</p>
+            <h3 id="easter-egg-title" data-i18n="easter.title">Техническая памятка</h3>
+            <p class="modal-text" data-i18n="easter.desc">Нашёл маленький служебный люк. Там аккуратная инструкция по AmneziaVPN.</p>
+            <a class="btn btn-primary modal-link" href="#" id="easter-link"><i class="fas fa-lock-open"></i><span data-i18n="easter.link">Открыть</span></a>
         </div>
     </div>
 
     <script>
+        const I18N = {
+            ru: {
+                title: 'Сергей Блашкевич | Product / AI Engineer',
+                'nav.work': 'Кейсы',
+                'nav.approach': 'Подход',
+                'nav.experience': 'Опыт',
+                'nav.contact': 'Контакты',
+                'hero.eyebrow': 'Product / AI Engineer · Москва · удалённо / гибрид',
+                'hero.title': 'Делаю внутренние продукты на стыке AI, автоматизации и интеграций.',
+                'hero.summary': 'Помогаю командам пройти путь от неясной идеи до работающего инструмента: уточняю задачу, проектирую API и процессы, собираю решение и довожу его до реального использования.',
+                'hero.cta_work': 'Смотреть кейсы',
+                'hero.cta_pdf': 'PDF / печать',
+                'tag.ai': 'AI-анализ',
+                'tag.automation': 'Автоматизация',
+                'tag.integrations': 'API / интеграции',
+                'tag.internal': 'Внутренние инструменты',
+                'intro.kicker': 'Коротко',
+                'intro.title': 'Лучше всего работаю там, где нужно навести порядок в сложной задаче и собрать работающую систему.',
+                'intro.p1': 'Без лишней бюрократии: собрать факты, согласовать критерии результата, запустить первую версию и улучшать ее по обратной связи.',
+                'intro.p2': 'За 8+ лет прошел путь от технического директора шоу до пресейла, руководства инженерной группой и разработки внутренних инструментов на Python, JavaScript, SQL, REST API и AI.',
+                'work.kicker': 'Selected Work',
+                'work.title': 'Кейсы из рабочих и приватных проектов в публичном формате.',
+                'work.subtitle': 'Без закрытых деталей: только задача, подход и практический результат.',
+                'case.telegram.title': 'AI-анализ рабочих Telegram-чатов',
+                'case.telegram.desc': 'Инструмент выгружает историю чатов, бережно обходит лимиты Telegram, считает активность и формирует AI-отчеты по требованиям, рискам и незакрытым темам.',
+                'case.knowledge.title': 'Ассистент по внутренней документации',
+                'case.knowledge.desc': 'RAG-контур: парсинг, очистка, индексация базы знаний и интерфейс вопрос-ответ для команды, которой нужен быстрый доступ к документации.',
+                'case.redmine.title': 'Экспорт и нормализация данных из трекера',
+                'case.redmine.desc': 'Слой моделей и экспортеров для выгрузки задач, проектов, пользователей, времени и связей в форматы для аналитики, миграций и отчетности.',
+                'case.dsp.title': 'Remote-control tooling для DSP-процессоров',
+                'case.dsp.desc': 'Драйвер и примеры управления аудиопроцессорами: уровни, mute, матрица маршрутизации, опрос состояния и команды по протоколу устройства.',
+                'case.bot.title': 'Каталог продуктов внутри Telegram',
+                'case.bot.desc': 'Бот для поиска, навигации и показа карточек товаров из внешнего API с локальным кешем и понятной кнопочной логикой.',
+                'approach.kicker': 'What I Bring',
+                'approach.title': 'Быстро преарщаю идеи в продукт',
+                'cap.discovery.title': 'Discovery без лишнего',
+                'cap.discovery.desc': 'Быстро фиксирую контекст, ограничения и критерии результата. Дальше собираю первый рабочий контур.',
+                'cap.integration.title': 'API и интеграции',
+                'cap.integration.desc': 'Разбираю протоколы, проверяю поведение, собираю понятные схемы и устойчивые интеграционные потоки.',
+                'cap.ai.title': 'AI как рабочий инструмент',
+                'cap.ai.desc': 'Применяю LLM там, где это ускоряет работу: анализ переписок, поиск знаний, отчеты и внутренние помощники.',
+                'cap.lead.title': 'Стыковка команд',
+                'cap.lead.desc': 'Помогаю продажам, инженерам и пользователям говорить на одном языке, чтобы решения принимались быстрее и точнее.',
+                'exp.kicker': 'Experience',
+                'exp.title': 'Опыт без лишней формальности.',
+                'exp.yoonion.date': '2025 — сейчас',
+                'exp.yoonion.role': 'Lead Presales Engineer · Yoonion',
+                'exp.yoonion.desc': 'Демо, пилоты, обучение, сбор требований, цикл обратной связи, документация, клиентские процессы и автоматизация повторяемых задач.',
+                'exp.digis_lead.date': '2023 — сейчас',
+                'exp.digis_lead.role': 'Engineering Group Lead · DIGIS',
+                'exp.digis_lead.desc': 'Управление инженерной группой, внутренние IT-продукты, тестирование API и протоколов, схемы, регламенты и экспертная оценка решений.',
+                'exp.digis_pre.date': '2022 — 2023',
+                'exp.digis_pre.role': 'Lead Presales Engineer · Pro Audio',
+                'exp.digis_pre.desc': 'Технические консультации, спецификации, акустические расчёты, концептуальные схемы подключений и поддержка партнёров.',
+                'exp.show.date': '2017 — 2022',
+                'exp.show.role': 'Technical Director · Show Industry',
+                'exp.show.desc': 'Технические райдеры, звук/свет/видео, синхронизация контента, подрядчики, зарубежные туры и технические переговоры.',
+                'exp.credentials': 'Образование: звукорежиссура кино и телевидения, ГИТР. Курс Python Developer, Skillbox. English B2.',
+                'contact.kicker': 'Contact',
+                'contact.title': 'Можно писать сразу с контекстом задачи.',
+                'contact.subtitle': 'Быстрее всего отвечаю в Telegram. Интересны продуктовые инженерные задачи, AI-инструменты, интеграции и внутренние системы.',
+                'contact.copy': 'Скопировать email',
+                'contact.print': 'Печать',
+                'footer.line': 'Product / AI Engineer · automation · integrations · internal tools',
+                'easter.kicker': 'Hidden Note',
+                'easter.title': 'Техническая памятка',
+                'easter.desc': 'Нашёл маленький служебный люк. Там аккуратная инструкция по AmneziaVPN.',
+                'easter.link': 'Открыть',
+                toastCopied: 'Скопировано'
+            },
+            en: {
+                title: 'Sergei Blashkevich | Product / AI Engineer',
+                'nav.work': 'Work',
+                'nav.approach': 'Approach',
+                'nav.experience': 'Experience',
+                'nav.contact': 'Contact',
+                'hero.eyebrow': 'Product / AI Engineer · Moscow · remote / hybrid',
+                'hero.title': 'I turn AI, automation, and integrations into working internal products.',
+                'hero.summary': 'I combine product discovery, engineering practice, and calm communication: pull requirements out of ambiguity, design APIs/workflows, build useful tools, and help people adopt them.',
+                'hero.cta_work': 'View cases',
+                'hero.cta_pdf': 'PDF / print',
+                'tag.ai': 'AI analysis',
+                'tag.automation': 'Automation',
+                'tag.integrations': 'API / integrations',
+                'tag.internal': 'Internal tools',
+                'intro.kicker': 'In Short',
+                'intro.title': 'I like systems where product uncertainty meets technical reality.',
+                'intro.p1': 'I do not like process theater. I prefer gathering facts quickly, agreeing on success criteria, shipping a first working loop, and improving it from real operational signals.',
+                'intro.p2': 'Across 8+ years I moved from technical show direction to presales, engineering group leadership, and internal tool development with Python, JavaScript, SQL, REST APIs, and local/cloud AI workflows.',
+                'work.kicker': 'Selected Work',
+                'work.title': 'Public-safe cases from private and work projects.',
+                'work.subtitle': 'No private repo links or client details: just the problem, approach, and engineering value.',
+                'case.telegram.title': 'AI analysis for work Telegram chats',
+                'case.telegram.desc': 'A tool that exports chat history, respects Telegram limits, measures activity, and produces AI reports on requirements, risks, and unresolved topics.',
+                'case.knowledge.title': 'Internal documentation assistant',
+                'case.knowledge.desc': 'A RAG loop with parsing, cleaning, knowledge-base indexing, and a Q&A interface for teams that need fast access to product documentation.',
+                'case.redmine.title': 'Tracker data export and normalization',
+                'case.redmine.desc': 'Model and exporter layer for issues, projects, users, time entries, and relations in analysis-, migration-, and reporting-friendly formats.',
+                'case.dsp.title': 'Remote-control tooling for DSP processors',
+                'case.dsp.desc': 'Driver and examples for audio processor control: levels, mutes, routing matrix, state polling, and device-protocol commands.',
+                'case.bot.title': 'Product catalog inside Telegram',
+                'case.bot.desc': 'A bot for product search, navigation, and item cards from an external API with local cache and button-driven user flows.',
+                'approach.kicker': 'What I Bring',
+                'approach.title': 'I am most useful when “we need to figure this out” has to become a working system.',
+                'cap.discovery.title': 'Discovery without theater',
+                'cap.discovery.desc': 'Questions, success criteria, constraints, process map, and a fast prototype instead of long bureaucracy.',
+                'cap.integration.title': 'APIs and integrations',
+                'cap.integration.desc': 'I read protocols, test behavior, build clear diagrams, and connect products into working flows.',
+                'cap.ai.title': 'AI as a tool',
+                'cap.ai.desc': 'I use LLMs where they save real effort: chat analysis, knowledge search, reports, and internal assistants.',
+                'cap.lead.title': 'Translation between people',
+                'cap.lead.desc': 'I can speak with sales, engineers, partners, and users in a way that makes decisions more precise.',
+                'exp.kicker': 'Experience',
+                'exp.title': 'Experience without unnecessary formality.',
+                'exp.yoonion.date': '2025 — now',
+                'exp.yoonion.role': 'Lead Presales Engineer · Yoonion',
+                'exp.yoonion.desc': 'Demos, pilots, enablement, requirements, feedback loops, documentation, customer workflows, and automation for repeatable tasks.',
+                'exp.digis_lead.date': '2023 — now',
+                'exp.digis_lead.role': 'Engineering Group Lead · DIGIS',
+                'exp.digis_lead.desc': 'Engineering group coordination, internal IT products, API/protocol testing, diagrams, standards, and expert product evaluation.',
+                'exp.digis_pre.date': '2022 — 2023',
+                'exp.digis_pre.role': 'Lead Presales Engineer · Pro Audio',
+                'exp.digis_pre.desc': 'Technical consulting, specifications, acoustic calculations, conceptual connection diagrams, and partner support.',
+                'exp.show.date': '2017 — 2022',
+                'exp.show.role': 'Technical Director · Show Industry',
+                'exp.show.desc': 'Riders, sound/light/video, content synchronization, vendors, international tours, and technical negotiations.',
+                'exp.credentials': 'Education: film and TV sound engineering, GITR. Python Developer course, Skillbox. English B2.',
+                'contact.kicker': 'Contact',
+                'contact.title': 'You can write with task context right away.',
+                'contact.subtitle': 'Telegram is fastest. I am interested in product engineering work, AI tools, integrations, and internal systems.',
+                'contact.copy': 'Copy email',
+                'contact.print': 'Print',
+                'footer.line': 'Product / AI Engineer · automation · integrations · internal tools',
+                'easter.kicker': 'Hidden Note',
+                'easter.title': 'Technical note',
+                'easter.desc': 'You found a small service hatch. It contains a clean AmneziaVPN setup manual.',
+                'easter.link': 'Open',
+                toastCopied: 'Copied'
+            }
+        };
+
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
 
@@ -395,323 +365,28 @@
         }
 
         hamburger.addEventListener('click', () => toggleMobileMenu());
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleMobileMenu();
-            }
-        });
-
-        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => toggleMobileMenu(false)));
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.querySelectorAll('.nav-link').forEach((link) => link.addEventListener('click', () => toggleMobileMenu(false)));
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', (event) => {
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (!target) return;
+                event.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
         window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 24);
         });
-
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('animate-on-scroll');
-            observer.observe(section);
-        });
-
-        const I18N = {
-            ru: {
-                title: 'Сергей Блашкевич | Product Engineer',
-                'nav.home': 'Главная',
-                'nav.about': 'Обо мне',
-                'nav.impact': 'Impact',
-                'nav.experience': 'Опыт',
-                'nav.skills': 'Навыки',
-                'nav.education': 'Образование',
-                'nav.contact': 'Контакты',
-                'hero.name': 'Сергей Блашкевич',
-                'hero.role': 'Product Engineer • Presales Engineer • Engineering Lead',
-                'hero.summary': 'Решаю сложные задачи эффективными методами. Соединяю продукт, аналитику и инженерию: требования, API, автоматизация, процессы, метрики.',
-                'hero.meta': 'Москва • Удалённо/гибрид • Английский B2',
-                'hero.alias': 'aka Sergey Aktush',
-                'hero.cta_pdf': 'Скачать PDF',
-                'hero.cta_contact': 'Связаться',
-                'about.title': 'Обо мне',
-                'about.heading': 'Product/Engineering: от требований до результата',
-                'about.p1': 'Product Engineer с опытом в пресейле и руководстве инженерной группой. Быстро погружаюсь в предметную область, формализую требования, проектирую решения и довожу внедрение до результата.',
-                'about.p2': 'Мой фокус — сложные продукты и процессы: API/интеграции, автоматизация, документация и обучение, аналитика и метрики, взаимодействие с командами и партнёрами.',
-                'stats.years_num': '8+',
-                'stats.years_label': 'лет опыта',
-                'stats.focus_num': '3',
-                'stats.focus_label': 'product/engineering/presales',
-                'stats.lang_num': 'B2',
-                'stats.lang_label': 'English',
-                'impact.title': 'Impact',
-                'impact.subtitle': 'Коротко о том, что я делал и какой результат приносил — по ролям, без “воды” и выдуманных кейсов.',
-                'impact.yoonion.title': 'Yoonion — Ведущий пресейл-инженер',
-                'impact.yoonion.period': 'Апр 2025 — настоящее время',
-                'impact.yoonion.bullets': `
-                    <ul class="impact-list">
-                        <li>Техническое сопровождение продаж: демо, обучение, пилоты.</li>
-                        <li>Сбор и анализ обратной связи, работа с требованиями и документацией.</li>
-                        <li>Оптимизация процессов и воркфлоу клиентов; подготовка отчётности.</li>
-                        <li>Скрипты автоматизации для типовых задач.</li>
-                    </ul>
-                `,
-                'impact.digis_lead.title': 'DIGIS — Руководитель инженерной группы',
-                'impact.digis_lead.period': 'Сен 2023 — настоящее время',
-                'impact.digis_lead.bullets': `
-                    <ul class="impact-list">
-                        <li>Организация и контроль работы инженерной группы в комплексных системах.</li>
-                        <li>Регламенты/инструкции, структурные схемы; проверка качества документации.</li>
-                        <li>Тестирование API и протоколов, экспертная оценка продуктов.</li>
-                        <li>Внутренние IT-продукты: разработка/поддержка/внедрение.</li>
-                    </ul>
-                `,
-                'impact.digis_presales.title': 'DIGIS — Ведущий пресейл-инженер',
-                'impact.digis_presales.period': 'Июл 2022 — Сен 2023',
-                'impact.digis_presales.bullets': `
-                    <ul class="impact-list">
-                        <li>Технические консультации партнёров, спецификации и расчёты.</li>
-                        <li>Концептуальные схемы подключений и интеграций.</li>
-                        <li>Изучение и тестирование продуктов (API/протоколы).</li>
-                        <li>Экспертная оценка целесообразности дистрибуции.</li>
-                    </ul>
-                `,
-                'impact.self.title': 'Самозанятый — Технический директор шоу',
-                'impact.self.period': 'Авг 2017 — Июл 2022',
-                'impact.self.bullets': `
-                    <ul class="impact-list">
-                        <li>Технические райдеры и стандарты по звуку/свету/видео.</li>
-                        <li>Автоматизация и синхронизация контента (шоу-процессы).</li>
-                        <li>Подрядчики: поиск, согласование, контроль соответствия документации.</li>
-                        <li>Поддержка зарубежных гастролей: переговоры и переводы техдоков.</li>
-                    </ul>
-                `,
-                'impact.tools_common': 'Tools: Python, JavaScript, SQL, REST API',
-                'impact.tools_digis': 'Tools: Python, JavaScript, SQL, REST API, Docker, Grafana',
-                'impact.tools_presales': 'Tools: SQL, REST API, solution design, docs & training',
-                'impact.tools_self': 'Tools: process design, documentation, vendor management',
-                'exp.title': 'Опыт',
-                'exp.yoonion.date': 'Апр 2025 — настоящее время',
-                'exp.yoonion.role': 'Ведущий пресейл-инженер',
-                'exp.yoonion.company': 'Yoonion',
-                'exp.yoonion.desc': 'Демо, пилоты и обучение; сбор и анализ обратной связи; требования и документация; оптимизация процессов; автоматизация скриптами.',
-                'exp.digis_lead.date': 'Сен 2023 — настоящее время',
-                'exp.digis_lead.role': 'Руководитель инженерной группы',
-                'exp.digis_lead.company': 'Цифровые системы, ГК «DIGIS»',
-                'exp.digis_lead.desc': 'Структурный анализ и поддержка партнёров; регламенты/инструкции/схемы; тестирование API/протоколов; внутренние IT-продукты.',
-                'exp.digis_presales.date': 'Июл 2022 — Сен 2023',
-                'exp.digis_presales.role': 'Ведущий пресейл-инженер (проф. акустика)',
-                'exp.digis_presales.company': 'Цифровые системы, ГК «DIGIS»',
-                'exp.digis_presales.desc': 'Технические консультации, спецификации и расчёты; схемы подключений; тестирование продуктов (API/протоколы); экспертная оценка.',
-                'exp.self.date': 'Авг 2017 — Июл 2022',
-                'exp.self.role': 'Технический директор шоу',
-                'exp.self.company': 'Самозанятый',
-                'exp.self.desc': 'Райдеры и документация; технологические решения/автоматизация; подрядчики; зарубежные гастроли (переговоры/переводы).',
-                'exp.note': 'Примечание: роли “настоящее время” могут идти параллельно — так отражено в исходном резюме.',
-                'edu.title': 'Образование',
-                'edu.gitr.title': 'Неоконченное высшее',
-                'edu.gitr.org': 'Институт кино и телевидения (ГИТР), Москва',
-                'edu.gitr.year': '2012',
-                'edu.gitr.desc': 'Звукорежиссура кино и телевидения.',
-                'edu.skillbox.title': 'Разработчик Python',
-                'edu.skillbox.org': 'Skillbox',
-                'edu.skillbox.year': '2025',
-                'edu.skillbox.desc': 'Курс разработчика Python.',
-                'skills.title': 'Навыки',
-                'skills.tech.title': 'Tech',
-                'skills.product.title': 'Product',
-                'skills.product.ba': 'Бизнес-анализ',
-                'skills.product.req': 'Анализ требований',
-                'skills.product.metrics': 'Продуктовые метрики',
-                'skills.collab.title': 'Collaboration',
-                'skills.collab.cross': 'Кроссфункциональность',
-                'skills.collab.stakeholders': 'Управление ожиданиями',
-                'skills.collab.present': 'Навыки презентации',
-                'skills.lang.title': 'Languages',
-                'skills.lang.ru': 'Русский — родной',
-                'skills.lang.en': 'English — B2',
-                'contact.title': 'Контакты',
-                'contact.subtitle': 'Быстрее всего отвечаю в Telegram. Можно писать по делу и сразу с контекстом.',
-                'contact.email_label': 'Email',
-                'contact.tg_label': 'Telegram',
-                'contact.copy_btn': 'Скопировать email',
-                'contact.print_btn': 'Версия для печати',
-                'contact.card_title': 'Короткое резюме',
-                'contact.card_p1': 'Product Engineer с опытом 8+ лет: пресейл, управление инженерной группой, анализ требований, API/интеграции, автоматизация и документация.',
-                'contact.card_p2': 'Формат: удалённо / гибрид. Готов к редким командировкам.',
-                'badge.role': 'Product Engineer',
-                'badge.api': 'API / Integrations',
-                'badge.auto': 'Automation',
-                'badge.docs': 'Docs & Training',
-                'footer.tagline': 'Product Engineer • Presales • Engineering Lead',
-                'footer.copyright': '© 2026 Sergey Aktush. All rights reserved.',
-                'easter.title': 'Secret',
-                'easter.desc': 'Если ты знаешь — ты знаешь.',
-                'easter.link': 'Open VPN manual',
-                toastCopied: 'Скопировано'
-            },
-            en: {
-                title: 'Sergei Blashkevich | Product Engineer',
-                'nav.home': 'Home',
-                'nav.about': 'About',
-                'nav.impact': 'Impact',
-                'nav.experience': 'Experience',
-                'nav.skills': 'Skills',
-                'nav.education': 'Education',
-                'nav.contact': 'Contact',
-                'hero.name': 'Sergei Blashkevich',
-                'hero.role': 'Product Engineer • Presales Engineer • Engineering Lead',
-                'hero.summary': 'I solve complex problems efficiently. I connect product, analytics, and engineering: requirements, APIs, automation, processes, and metrics.',
-                'hero.meta': 'Moscow • Remote/Hybrid • English B2',
-                'hero.alias': 'aka Sergey Aktush',
-                'hero.cta_pdf': 'Download PDF',
-                'hero.cta_contact': 'Contact',
-                'about.title': 'About',
-                'about.heading': 'Product/Engineering: from requirements to delivery',
-                'about.p1': 'Product Engineer with experience in presales and leading an engineering group. I ramp up fast, formalize requirements, design solutions, and drive implementation to results.',
-                'about.p2': 'My focus: complex products and processes — APIs/integrations, automation, documentation and training, analytics and metrics, collaboration with teams and partners.',
-                'stats.years_num': '8+',
-                'stats.years_label': 'years experience',
-                'stats.focus_num': '3',
-                'stats.focus_label': 'product/engineering/presales',
-                'stats.lang_num': 'B2',
-                'stats.lang_label': 'English',
-                'impact.title': 'Impact',
-                'impact.subtitle': 'What I did and the value I delivered — grouped by roles, without made-up case studies.',
-                'impact.yoonion.title': 'Yoonion — Lead Presales Engineer',
-                'impact.yoonion.period': 'Apr 2025 — Present',
-                'impact.yoonion.bullets': `
-                    <ul class="impact-list">
-                        <li>Technical presales: demos, enablement, and pilots.</li>
-                        <li>Collected and analyzed feedback; worked with requirements and documentation.</li>
-                        <li>Optimized customer workflows; prepared progress and effectiveness reports.</li>
-                        <li>Built automation scripts for repeatable tasks.</li>
-                    </ul>
-                `,
-                'impact.digis_lead.title': 'DIGIS — Engineering Group Lead',
-                'impact.digis_lead.period': 'Sep 2023 — Present',
-                'impact.digis_lead.bullets': `
-                    <ul class="impact-list">
-                        <li>Managed an engineering group for complex systems and partner support.</li>
-                        <li>Created standards, instructions, and structural diagrams; reviewed documentation quality.</li>
-                        <li>Tested APIs and interaction protocols; evaluated product feasibility for distribution.</li>
-                        <li>Built and rolled out internal IT products and tools.</li>
-                    </ul>
-                `,
-                'impact.digis_presales.title': 'DIGIS — Lead Presales Engineer (Pro audio)',
-                'impact.digis_presales.period': 'Jul 2022 — Sep 2023',
-                'impact.digis_presales.bullets': `
-                    <ul class="impact-list">
-                        <li>Partner consulting; specs and calculations; conceptual connectivity designs.</li>
-                        <li>Researched and tested complex products (APIs, protocols, control).</li>
-                        <li>Provided expert evaluation for distribution decisions.</li>
-                        <li>Maintained up-to-date knowledge across a wide vendor portfolio.</li>
-                    </ul>
-                `,
-                'impact.self.title': 'Self-employed — Technical Director (Show industry)',
-                'impact.self.period': 'Aug 2017 — Jul 2022',
-                'impact.self.bullets': `
-                    <ul class="impact-list">
-                        <li>Owned technical riders/standards for sound, lighting, and video.</li>
-                        <li>Designed solutions for show operations; synchronization and automation.</li>
-                        <li>Vendor sourcing, negotiations, and compliance control with documentation.</li>
-                        <li>International tours: negotiations and technical document translation/support.</li>
-                    </ul>
-                `,
-                'impact.tools_common': 'Tools: Python, JavaScript, SQL, REST API',
-                'impact.tools_digis': 'Tools: Python, JavaScript, SQL, REST API, Docker, Grafana',
-                'impact.tools_presales': 'Tools: SQL, REST API, solution design, docs & training',
-                'impact.tools_self': 'Tools: process design, documentation, vendor management',
-                'exp.title': 'Experience',
-                'exp.yoonion.date': 'Apr 2025 — Present',
-                'exp.yoonion.role': 'Lead Presales Engineer',
-                'exp.yoonion.company': 'Yoonion',
-                'exp.yoonion.desc': 'Demos, pilots and enablement; feedback analysis; requirements and documentation; process optimization; automation scripts.',
-                'exp.digis_lead.date': 'Sep 2023 — Present',
-                'exp.digis_lead.role': 'Engineering Group Lead',
-                'exp.digis_lead.company': 'Digital Systems, DIGIS Group',
-                'exp.digis_lead.desc': 'Structural analysis and partner support; standards/instructions/diagrams; API/protocol testing; internal IT products.',
-                'exp.digis_presales.date': 'Jul 2022 — Sep 2023',
-                'exp.digis_presales.role': 'Lead Presales Engineer (Pro audio)',
-                'exp.digis_presales.company': 'Digital Systems, DIGIS Group',
-                'exp.digis_presales.desc': 'Consulting, specs and calculations; connectivity designs; testing complex products (APIs/protocols); expert evaluations.',
-                'exp.self.date': 'Aug 2017 — Jul 2022',
-                'exp.self.role': 'Technical Director (Show industry)',
-                'exp.self.company': 'Self-employed',
-                'exp.self.desc': 'Riders and documentation; automation and synchronization; vendor management; international tours (negotiations/translations).',
-                'exp.note': 'Note: “Present” roles may overlap — kept as in the source resume.',
-                'edu.title': 'Education',
-                'edu.gitr.title': 'Incomplete higher education',
-                'edu.gitr.org': 'GITR Institute of Cinema and Television, Moscow',
-                'edu.gitr.year': '2012',
-                'edu.gitr.desc': 'Film/TV sound engineering.',
-                'edu.skillbox.title': 'Python Developer',
-                'edu.skillbox.org': 'Skillbox',
-                'edu.skillbox.year': '2025',
-                'edu.skillbox.desc': 'Python developer program.',
-                'skills.title': 'Skills',
-                'skills.tech.title': 'Tech',
-                'skills.product.title': 'Product',
-                'skills.product.ba': 'Business analysis',
-                'skills.product.req': 'Requirements analysis',
-                'skills.product.metrics': 'Product metrics',
-                'skills.collab.title': 'Collaboration',
-                'skills.collab.cross': 'Cross-functional work',
-                'skills.collab.stakeholders': 'Stakeholder management',
-                'skills.collab.present': 'Presentation skills',
-                'skills.lang.title': 'Languages',
-                'skills.lang.ru': 'Russian — native',
-                'skills.lang.en': 'English — B2',
-                'contact.title': 'Contact',
-                'contact.subtitle': 'Fastest response on Telegram. Feel free to reach out with context.',
-                'contact.email_label': 'Email',
-                'contact.tg_label': 'Telegram',
-                'contact.copy_btn': 'Copy email',
-                'contact.print_btn': 'Print-friendly',
-                'contact.card_title': 'Quick summary',
-                'contact.card_p1': 'Product Engineer with 8+ years: presales, engineering leadership, requirements analysis, APIs/integrations, automation, and documentation.',
-                'contact.card_p2': 'Work mode: remote / hybrid. Open to occasional travel.',
-                'badge.role': 'Product Engineer',
-                'badge.api': 'API / Integrations',
-                'badge.auto': 'Automation',
-                'badge.docs': 'Docs & Training',
-                'footer.tagline': 'Product Engineer • Presales • Engineering Lead',
-                'footer.copyright': '© 2026 Sergey Aktush. All rights reserved.',
-                'easter.title': 'Secret',
-                'easter.desc': 'If you know, you know.',
-                'easter.link': 'Open VPN manual',
-                toastCopied: 'Copied'
-            }
-        };
 
         function applyI18n(lang) {
             const dict = I18N[lang] || I18N.ru;
             document.title = dict.title;
             document.documentElement.lang = lang === 'en' ? 'en' : 'ru';
-
             document.querySelectorAll('[data-i18n]').forEach((el) => {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key] != null) el.textContent = dict[key];
             });
-
-            document.querySelectorAll('[data-i18n-html]').forEach((el) => {
-                const key = el.getAttribute('data-i18n-html');
-                if (dict[key] != null) el.innerHTML = dict[key];
-            });
-
             document.querySelectorAll('.lang-toggle').forEach((btn) => {
                 btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
             });
@@ -720,38 +395,28 @@
         const LANG_STORAGE_KEY = 'cv_lang';
         const initialLang = localStorage.getItem(LANG_STORAGE_KEY) || 'ru';
         applyI18n(initialLang);
-
         document.querySelectorAll('.lang-toggle').forEach((btn) => {
             btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
-                localStorage.setItem(LANG_STORAGE_KEY, lang);
-                applyI18n(lang);
+                localStorage.setItem(LANG_STORAGE_KEY, btn.dataset.lang);
+                applyI18n(btn.dataset.lang);
             });
         });
 
-        const downloadPdfBtn = document.getElementById('download-pdf');
-        if (downloadPdfBtn) downloadPdfBtn.addEventListener('click', () => window.print());
-        const contactPrintBtn = document.getElementById('contact-print');
-        if (contactPrintBtn) contactPrintBtn.addEventListener('click', () => window.print());
-
-        const contactCopyBtn = document.getElementById('contact-copy');
-        if (contactCopyBtn) {
-            contactCopyBtn.addEventListener('click', async () => {
-                const email = 'sergey.aktush@gmail.com';
-                try {
-                    await navigator.clipboard.writeText(email);
-                    contactCopyBtn.classList.add('copied');
-                    const oldText = contactCopyBtn.textContent;
-                    contactCopyBtn.textContent = (I18N[localStorage.getItem(LANG_STORAGE_KEY) || 'ru'] || I18N.ru).toastCopied;
-                    setTimeout(() => {
-                        contactCopyBtn.classList.remove('copied');
-                        contactCopyBtn.textContent = oldText;
-                    }, 1200);
-                } catch (_) {
-                    window.prompt('Copy email:', email);
-                }
-            });
-        }
+        document.getElementById('download-pdf').addEventListener('click', () => window.print());
+        document.getElementById('contact-print').addEventListener('click', () => window.print());
+        document.getElementById('contact-copy').addEventListener('click', async (event) => {
+            const button = event.currentTarget;
+            const email = 'sergey.aktush@gmail.com';
+            const dict = I18N[localStorage.getItem(LANG_STORAGE_KEY) || 'ru'] || I18N.ru;
+            try {
+                await navigator.clipboard.writeText(email);
+                const oldText = button.querySelector('span').textContent;
+                button.querySelector('span').textContent = dict.toastCopied;
+                setTimeout(() => { button.querySelector('span').textContent = oldText; }, 1200);
+            } catch (_) {
+                window.prompt('Copy email:', email);
+            }
+        });
 
         const logo = document.getElementById('site-logo');
         const modal = document.getElementById('easter-egg-modal');
@@ -759,50 +424,39 @@
         let clickCount = 0;
         let clickResetTimer = null;
         const REQUIRED_CLICKS = 7;
-        const RESET_AFTER_MS = 1200;
+        const RESET_AFTER_MS = 1400;
 
         function openModal() {
-            if (!modal) return;
-            // Keep the destination out of the HTML to make it less obvious in view-source.
-            if (easterLink) {
-                const secretHref = String.fromCharCode(
-                    109,97,110,117,97,108,45,97,109,110,101,122,105,97,118,112,110,46,104,116,109,108
-                );
-                easterLink.setAttribute('href', secretHref);
-            }
+            const secretHref = String.fromCharCode(109,97,110,117,97,108,45,97,109,110,101,122,105,97,118,112,110,46,104,116,109,108);
+            easterLink.setAttribute('href', secretHref);
             modal.classList.add('open');
             modal.setAttribute('aria-hidden', 'false');
-            const focusable = modal.querySelector('a, button');
-            if (focusable) focusable.focus();
+            modal.querySelector('a, button').focus();
         }
+
         function closeModal() {
-            if (!modal) return;
             modal.classList.remove('open');
             modal.setAttribute('aria-hidden', 'true');
+            logo.focus();
         }
 
-        if (logo) {
-            logo.addEventListener('click', () => {
-                clickCount += 1;
-                if (clickResetTimer) clearTimeout(clickResetTimer);
-                clickResetTimer = setTimeout(() => { clickCount = 0; }, RESET_AFTER_MS);
-                if (clickCount >= REQUIRED_CLICKS) {
-                    clickCount = 0;
-                    clearTimeout(clickResetTimer);
-                    openModal();
-                }
-            });
-        }
+        logo.addEventListener('click', () => {
+            clickCount += 1;
+            if (clickResetTimer) clearTimeout(clickResetTimer);
+            clickResetTimer = setTimeout(() => { clickCount = 0; }, RESET_AFTER_MS);
+            if (clickCount >= REQUIRED_CLICKS) {
+                clickCount = 0;
+                clearTimeout(clickResetTimer);
+                openModal();
+            }
+        });
 
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                const target = e.target;
-                if (target && target.closest && target.closest('[data-modal-close]')) closeModal();
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') closeModal();
-            });
-        }
+        modal.addEventListener('click', (event) => {
+            if (event.target.closest('[data-modal-close]')) closeModal();
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('open')) closeModal();
+        });
     </script>
 </body>
 </html>

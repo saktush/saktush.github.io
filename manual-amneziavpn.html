@@ -4,257 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>AmneziaVPN Deployment Manual | Sergey Aktush</title>
+    <title>AmneziaVPN Deployment Note | Sergey Aktush</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Manual-specific styles */
-        .manual-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-            background: var(--bg-primary);
-        }
-
-        .manual-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        .manual-title {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .manual-subtitle {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .manual-content {
-            line-height: 1.7;
-        }
-
-        .manual-section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: var(--bg-secondary);
-            border-radius: var(--radius-lg);
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .manual-section h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.75rem;
-        }
-
-        .manual-section h3 {
-            color: var(--text-primary);
-            margin: 1.5rem 0 1rem 0;
-            font-size: 1.25rem;
-        }
-
-        .manual-section p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-
-        .manual-section ul, .manual-section ol {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-
-        .manual-section li {
-            margin-bottom: 0.5rem;
-            color: var(--text-secondary);
-        }
-
-        .code-block {
-            background: var(--bg-dark);
-            color: #e2e8f0;
-            padding: 1.5rem;
-            border-radius: var(--radius-md);
-            margin: 1.5rem 0;
-            overflow-x: auto;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .code-block code {
-            background: transparent;
-            padding: 0;
-            color: inherit;
-            white-space: pre;
-            display: block;
-            tab-size: 4;
-            -moz-tab-size: 4;
-        }
-
-        .code-block code span {
-            display: inline;
-        }
-
-        .note {
-            background: rgba(245, 158, 11, 0.1);
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 var(--radius-md) var(--radius-md) 0;
-        }
-
-        .note p {
-            margin: 0;
-            color: var(--text-primary);
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            color: var(--primary-dark);
-        }
-
-        @media (max-width: 768px) {
-            .manual-container {
-                padding: 1rem;
-            }
-            
-            .manual-title {
-                font-size: 2rem;
-            }
-            
-            .manual-section {
-                padding: 1.5rem;
-            }
-            
-            .code-block {
-                padding: 1rem;
-                font-size: 0.8rem;
-                margin: 1rem 0;
-            }
-            
-            .code-block code {
-                white-space: pre-wrap;
-                word-wrap: break-word;
-            }
-        }
-    </style>
 </head>
-<body>
-    <div class="manual-container">
-        <a href="index.html" class="back-link">
-            <i class="fas fa-arrow-left"></i> Back to Main Site
-        </a>
-        
-        <div class="manual-header">
-            <h1 class="manual-title">AmneziaVPN Deployment Manual</h1>
-            <p class="manual-subtitle">Пошаговое руководство по настройке защищенного пользователя для AmneziaVPN</p>
-        </div>
+<body class="manual-page">
+    <main class="manual-shell">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i><span>Back to main page</span></a>
 
-        <div class="manual-content">
-            <div class="manual-section">
-                <h2>1. На локальной машине (macOS)</h2>
-                <p>Генерируем современный ключ ED25519 (лучший формат для Amnezia) и копируем его на сервер.</p>
-                
-                <h3>Создаем ключ (если еще нет), на вопросы жать Enter</h3>
-                <div class="code-block">
-                    <code>ssh-keygen -t ed25519 -f ~/.ssh/amnezia_key</code>
-                </div>
+        <header class="manual-hero">
+            <p class="section-kicker">Hidden Technical Note</p>
+            <h1>AmneziaVPN Deployment Manual</h1>
+            <p>Аккуратная памятка по созданию отдельного SSH-пользователя для установки AmneziaVPN: ключи, sudo, отключение паролей, проверка и наблюдение за логами.</p>
+        </header>
 
-                <h3>Копируем публичный ключ на сервер (замените user и ip)</h3>
-                <div class="code-block">
-                    <code>ssh-copy-id -i ~/.ssh/amnezia_key.pub root@your_server_ip</code>
+        <section class="manual-checklist" aria-label="Prerequisites">
+            <div><strong>Нужно заранее</strong><span>VPS с root-доступом, IP сервера, локальный macOS/Linux терминал.</span></div>
+            <div><strong>Цель</strong><span>Отдельный пользователь `amnezia_user`, вход только по ключу, sudo без пароля для установки.</span></div>
+            <div><strong>Проверка</strong><span>`ssh -i ~/.ssh/amnezia_key amnezia_user@your_server_ip` и `sudo whoami`.</span></div>
+        </section>
+
+        <section class="manual-section">
+            <div class="manual-step">
+                <span>01</span>
+                <div>
+                    <h2>Локальная машина</h2>
+                    <p>Генерируем ED25519-ключ и копируем публичную часть на сервер. Если ключ уже есть, этот шаг можно пропустить или выбрать другое имя файла.</p>
                 </div>
             </div>
+            <div class="terminal-block">
+                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
+                <pre><code>ssh-keygen -t ed25519 -f ~/.ssh/amnezia_key
+ssh-copy-id -i ~/.ssh/amnezia_key.pub root@your_server_ip</code></pre>
+            </div>
+        </section>
 
-            <div class="manual-section">
-                <h2>2. На сервере (под пользователем root)</h2>
-                <p>Создаем пользователя, даем права и настраиваем SSH.</p>
-                
-                <div class="code-block">
-                    <code># 1. Создаем пользователя (пароль вводим любой, он будет отключен)
-adduser amnezia_user
-# 2. Добавляем в группу sudo
+        <section class="manual-section">
+            <div class="manual-step">
+                <span>02</span>
+                <div>
+                    <h2>Сервер под root</h2>
+                    <p>Создаём отдельного пользователя, даём sudo без пароля, переносим authorized keys и отключаем вход по паролю во всех SSH-конфигах.</p>
+                </div>
+            </div>
+            <div class="terminal-block">
+                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
+                <pre><code>adduser amnezia_user
 usermod -aG sudo amnezia_user
-# 3. Разрешаем sudo без пароля (создаем отдельный конфиг-файл)
 echo "amnezia_user ALL=(ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/amnezia_user
-# 4. Копируем SSH-ключи от root к новому пользователю
+
 mkdir -p /home/amnezia_user/.ssh
 cp /root/.ssh/authorized_keys /home/amnezia_user/.ssh/
 chown -R amnezia_user:amnezia_user /home/amnezia_user/.ssh
 chmod 700 /home/amnezia_user/.ssh
 chmod 600 /home/amnezia_user/.ssh/authorized_keys
-# 5. Отключаем пароли ВЕЗДЕ (включая cloud-init конфиги)
+
 sed -i 's/^PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
 find /etc/ssh/sshd_config.d/ -type f -exec sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' {} +
-# 6. Применяем настройки
-systemctl restart ssh</code>
+systemctl restart ssh</code></pre>
+            </div>
+            <aside class="manual-note">
+                <strong>Safety note</strong>
+                <p>Не закрывай текущую root-сессию, пока не проверишь вход новым пользователем в отдельном терминале. Так проще восстановиться, если SSH-конфиг применился не так.</p>
+            </aside>
+        </section>
+
+        <section class="manual-section">
+            <div class="manual-step">
+                <span>03</span>
+                <div>
+                    <h2>Проверка доступа</h2>
+                    <p>Заходим с конкретным ключом и проверяем, что sudo не спрашивает пароль. Ожидаемый ответ на `sudo whoami` — `root`.</p>
                 </div>
             </div>
+            <div class="terminal-block">
+                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
+                <pre><code>ssh -i ~/.ssh/amnezia_key amnezia_user@your_server_ip
+sudo whoami</code></pre>
+            </div>
+            <aside class="manual-note accent">
+                <strong>AmneziaVPN app</strong>
+                <p>При добавлении сервера укажи пользователя `amnezia_user` и приватный ключ `~/.ssh/amnezia_key`.</p>
+            </aside>
+        </section>
 
-            <div class="manual-section">
-                <h2>3. На локальной машине (Проверка)</h2>
-                <p>Проверяем, что заходим под новым пользователем по ключу и имеем права sudo.</p>
-
-                <h3>Заходим с указанием конкретного ключа</h3>
-                <div class="code-block">
-                    <code>ssh -i ~/.ssh/amnezia_key amnezia_user@your_server_ip</code>
-                </div>
-
-                <h3>Внутри проверяем sudo (не должно запрашивать пароль)</h3>
-                <div class="code-block">
-                    <code>sudo whoami</code>
-                </div>
-                <p># Должно вывести: root</p>
-
-                <div class="note">
-                    <p><strong>Важный нюанс:</strong> В приложении AmneziaVPN при добавлении сервера укажите путь к приватному ключу <code>~/.ssh/amnezia_key</code> и имя пользователя <code>amnezia_user</code>.</p>
+        <section class="manual-section">
+            <div class="manual-step">
+                <span>04</span>
+                <div>
+                    <h2>Наблюдение за установкой</h2>
+                    <p>Во время установки удобно смотреть системные логи авторизации и SSH. Почти все действия установки проходят через sudo.</p>
                 </div>
             </div>
+            <div class="terminal-block">
+                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
+                <pre><code>sudo journalctl -f -u ssh | grep sudo
+sudo tail -f /var/log/auth.log</code></pre>
+            </div>
+        </section>
 
-            <div class="manual-section">
-                <h2>4. На сервере (под пользователем с правами root)</h2>
-                <p>Мониторинг системного лога (Journal) а процессе установки Amnezia</p>
-                <p>Почти все действия, требующие sudo (а установка VPN состоит из них целиком), записываются в системный журнал.</p>
-
-                <div class="code-block">
-                    <code># Следить за всеми вызовами sudo в реальном времени
-sudo journalctl -f -u ssh | grep sudo
-# Или просто общий лог авторизации и команд
-sudo tail -f /var/log/auth.log</code>
+        <section class="manual-section">
+            <div class="manual-step">
+                <span>05</span>
+                <div>
+                    <h2>Мини-rollback</h2>
+                    <p>Если нужно временно вернуть парольный вход, делай это только из уже открытой root-сессии и сразу после проверки причины.</p>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="terminal-block">
+                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
+                <pre><code>sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
+systemctl restart ssh</code></pre>
+            </div>
+        </section>
+    </main>
 
     <script>
-        // Add syntax highlighting for code blocks (basic version)
-        document.addEventListener('DOMContentLoaded', function() {
-            const codeBlocks = document.querySelectorAll('.code-block code');
-            codeBlocks.forEach(block => {
-                // Simple formatting - you could add a proper highlighter library if needed
-                const text = block.textContent;
-                block.innerHTML = text.replace(/(## .*)/g, '<span style="color: #f59e0b;">$1</span>')
-                                     .replace(/(# .*)/g, '<span style="color: #6366f1;">$1</span>')
-                                     .replace(/(sudo |ssh |adduser |usermod |echo |mkdir |cp |chown |chmod |sed |find |systemctl |grep |tail)/g, '<span style="color: #10b981;">$1</span>');
+        document.querySelectorAll('.copy-code').forEach((button) => {
+            button.addEventListener('click', async () => {
+                const code = button.parentElement.querySelector('code').textContent;
+                const label = button.querySelector('span');
+                const oldText = label.textContent;
+                try {
+                    await navigator.clipboard.writeText(code);
+                    label.textContent = 'Copied';
+                    setTimeout(() => { label.textContent = oldText; }, 1200);
+                } catch (_) {
+                    window.prompt('Copy command:', code);
+                }
             });
         });
     </script>
