@@ -297,7 +297,10 @@ p {
 
 .system-visual {
     position: relative;
-    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 0;
     padding: 16px;
     border: 1px solid rgba(23, 23, 23, 0.12);
     border-radius: 12px;
@@ -333,68 +336,24 @@ p {
     font-size: 0.8rem;
 }
 
-.signal-map {
+.schema-frame {
     position: relative;
-    height: 280px;
-    margin-top: 16px;
+    width: 100%;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background:
-        radial-gradient(circle at 24% 18%, rgba(20, 106, 67, 0.08), transparent 32%),
-        radial-gradient(circle at 82% 34%, rgba(49, 93, 128, 0.08), transparent 32%),
-        linear-gradient(135deg, #fbfbfa, #f1f1ed);
+    background: transparent;
+    overflow: hidden;
 }
 
-.signal-map svg {
-    position: absolute;
-    inset: 0;
+.schema-image {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
-
-.signal-map path {
-    fill: none;
-    stroke: rgba(23, 23, 23, 0.2);
-    stroke-width: 1.5;
-    stroke-dasharray: 6 12;
-    animation: flow 10s linear infinite;
-}
-
-@keyframes flow {
-    to { stroke-dashoffset: -120; }
-}
-
-.signal-node {
-    position: absolute;
-    z-index: 2;
-    display: grid;
-    place-items: center;
-    gap: 4px;
-    width: 80px;
-    height: 64px;
-    border: 1px solid rgba(23, 23, 23, 0.14);
-    border-radius: var(--radius);
-    background: rgba(255, 255, 255, 0.88);
-    box-shadow: 0 10px 22px rgba(17, 17, 17, 0.08);
-    color: var(--ink);
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.signal-node i {
-    color: var(--green);
-    font-size: 1rem;
-}
-
-.node-a { top: 34px; left: 36px; }
-.node-b { top: 166px; left: 56px; }
-.node-c { top: 96px; right: 46px; }
-.node-d { right: 70px; bottom: 28px; }
 
 .visual-console {
     display: grid;
     gap: 8px;
-    margin-top: 12px;
     padding: 14px;
     border-radius: 8px;
     background: var(--dark);
@@ -819,7 +778,7 @@ section {
     }
 
     .system-visual {
-        min-height: 420px;
+        min-height: 0;
     }
 
     .capability-grid,
@@ -927,23 +886,8 @@ section {
     }
 
     .system-visual {
-        min-height: 360px;
         padding: 10px;
     }
-
-    .signal-map {
-        height: 230px;
-    }
-
-    .signal-node {
-        width: 68px;
-        height: 56px;
-    }
-
-    .node-a { top: 26px; left: 20px; }
-    .node-b { top: 146px; left: 28px; }
-    .node-c { top: 70px; right: 20px; }
-    .node-d { right: 30px; bottom: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
