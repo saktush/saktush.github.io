@@ -80,8 +80,19 @@ textarea {
     align-items: center;
     gap: 7px;
     color: var(--ink);
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0;
+}
+
+.logo-mark {
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.logo-name {
+    font-size: 0.88rem;
+    color: var(--muted);
+    white-space: nowrap;
 }
 
 .secret-dot {
@@ -827,6 +838,10 @@ section {
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .logo-name {
+        font-size: 0.82rem;
     }
 
     .nav-menu.active {
