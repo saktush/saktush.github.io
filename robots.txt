@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /manual-amneziavpn.html
+Disallow: /private/
+
+Sitemap: https://saktush.github.io/sitemap.xml
