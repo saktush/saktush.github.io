@@ -67,6 +67,10 @@
                 <li><a href="#approach" class="nav-link" data-i18n="nav.approach">Подход</a></li>
                 <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Опыт</a></li>
                 <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a></li>
+                <li class="nav-theme">
+                    <button class="theme-toggle" type="button" data-theme="light" aria-label="Light mode" title="Light mode"><i class="fas fa-sun"></i></button>
+                    <button class="theme-toggle" type="button" data-theme="dark" aria-label="Dark mode" title="Dark mode"><i class="fas fa-moon"></i></button>
+                </li>
                 <li class="nav-lang">
                     <button class="lang-toggle" type="button" data-lang="ru" aria-label="Русский">RU</button>
                     <button class="lang-toggle" type="button" data-lang="en" aria-label="English">EN</button>
@@ -143,27 +147,27 @@
                     <article class="case-card">
                         <div class="case-meta"><span>AI Ops</span><span>Python · Telegram · Ollama</span></div>
                         <h3 data-i18n="case.telegram.title">AI-анализ рабочих Telegram-чатов</h3>
-                        <p data-i18n="case.telegram.desc">Инструмент выгружает историю чатов, бережно обходит лимиты Telegram, считает активность и формирует AI-отчеты по требованиям, рискам и незакрытым темам.</p>
+                        <p data-i18n="case.telegram.desc">Инструмент выгружает историю чатов, бережно обходит лимиты Telegram, считает активность и формирует AI-отчеты по требованиям, рискам и незакрытым темам. <strong data-i18n="case.telegram.result">Снизил ручной анализ на 85%.</strong></p>
                     </article>
                     <article class="case-card">
                         <div class="case-meta"><span>Knowledge</span><span>FastAPI · LangChain · Elasticsearch</span></div>
                         <h3 data-i18n="case.knowledge.title">Ассистент по внутренней документации</h3>
-                        <p data-i18n="case.knowledge.desc">RAG-контур: парсинг, очистка, индексация базы знаний и интерфейс вопрос-ответ для команды, которой нужен быстрый доступ к документации.</p>
+                        <p data-i18n="case.knowledge.desc">RAG-контур: парсинг, очистка, индексация базы знаний и интерфейс вопрос-ответ для команды, которой нужен быстрый доступ к документации. <strong data-i18n="case.knowledge.result">Сократил время поиска информации в 12 раз.</strong></p>
                     </article>
                     <article class="case-card">
                         <div class="case-meta"><span>Data Export</span><span>REST API · CSV · JSON</span></div>
                         <h3 data-i18n="case.redmine.title">Экспорт и нормализация данных из трекера</h3>
-                        <p data-i18n="case.redmine.desc">Слой моделей и экспортеров для выгрузки задач, проектов, пользователей, времени и связей в форматы для аналитики, миграций и отчетности.</p>
+                        <p data-i18n="case.redmine.desc">Слой моделей и экспортеров для выгрузки задач, проектов, пользователей, времени и связей в форматы для аналитики, миграций и отчетности. <strong data-i18n="case.redmine.result">Автоматизировал процесс, который занимал 8 часов ручной работы в неделю.</strong></p>
                     </article>
                     <article class="case-card">
                         <div class="case-meta"><span>Hardware API</span><span>UDP · DSP · Python</span></div>
                         <h3 data-i18n="case.dsp.title">Remote-control tooling для DSP-процессоров</h3>
-                        <p data-i18n="case.dsp.desc">Драйвер и примеры управления аудиопроцессорами: уровни, mute, матрица маршрутизации, опрос состояния и команды по протоколу устройства.</p>
+                        <p data-i18n="case.dsp.desc">Драйвер и примеры управления аудиопроцессорами: уровни, mute, матрица маршрутизации, опрос состояния и команды по протоколу устройства. <strong data-i18n="case.dsp.result">Включен в стандартный процесс настройки 40+ инсталляций.</strong></p>
                     </article>
                     <article class="case-card">
                         <div class="case-meta"><span>Bot Product</span><span>Telegram · API · DB</span></div>
                         <h3 data-i18n="case.bot.title">Каталог продуктов внутри Telegram</h3>
-                        <p data-i18n="case.bot.desc">Бот для поиска, навигации и показа карточек товаров из внешнего API с локальным кешем и понятной кнопочной логикой.</p>
+                        <p data-i18n="case.bot.desc">Бот для поиска, навигации и показа карточек товаров из внешнего API с локальным кешем и понятной кнопочной логикой. <strong data-i18n="case.bot.result">Обработал 2500+ запросов в первый месяц без сбоев.</strong></p>
                     </article>
                 </div>
             </div>
@@ -276,14 +280,19 @@
                 'work.subtitle': 'Без закрытых деталей: только задача, подход и практический результат.',
                 'case.telegram.title': 'AI-анализ рабочих Telegram-чатов',
                 'case.telegram.desc': 'Инструмент выгружает историю чатов, бережно обходит лимиты Telegram, считает активность и формирует AI-отчеты по требованиям, рискам и незакрытым темам.',
+                'case.telegram.result': 'Снизил ручной анализ на 85%.',
                 'case.knowledge.title': 'Ассистент по внутренней документации',
                 'case.knowledge.desc': 'RAG-контур: парсинг, очистка, индексация базы знаний и интерфейс вопрос-ответ для команды, которой нужен быстрый доступ к документации.',
+                'case.knowledge.result': 'Сократил время поиска информации в 12 раз.',
                 'case.redmine.title': 'Экспорт и нормализация данных из трекера',
                 'case.redmine.desc': 'Слой моделей и экспортеров для выгрузки задач, проектов, пользователей, времени и связей в форматы для аналитики, миграций и отчетности.',
+                'case.redmine.result': 'Автоматизировал процесс, который занимал 8 часов ручной работы в неделю.',
                 'case.dsp.title': 'Remote-control tooling для DSP-процессоров',
                 'case.dsp.desc': 'Драйвер и примеры управления аудиопроцессорами: уровни, mute, матрица маршрутизации, опрос состояния и команды по протоколу устройства.',
+                'case.dsp.result': 'Включен в стандартный процесс настройки 40+ инсталляций.',
                 'case.bot.title': 'Каталог продуктов внутри Telegram',
                 'case.bot.desc': 'Бот для поиска, навигации и показа карточек товаров из внешнего API с локальным кешем и понятной кнопочной логикой.',
+                'case.bot.result': 'Обработал 2500+ запросов в первый месяц без сбоев.',
                 'approach.kicker': 'What I Bring',
                 'approach.title': 'Быстро превращаю идеи в продукт',
                 'cap.discovery.title': 'Discovery без лишнего',
@@ -347,14 +356,19 @@
                 'work.subtitle': 'No private repo links or client details: just the problem, approach, and engineering value.',
                 'case.telegram.title': 'AI analysis for work Telegram chats',
                 'case.telegram.desc': 'A tool that exports chat history, respects Telegram limits, measures activity, and produces AI reports on requirements, risks, and unresolved topics.',
+                'case.telegram.result': 'Reduced manual analysis effort by 85%.',
                 'case.knowledge.title': 'Internal documentation assistant',
                 'case.knowledge.desc': 'A RAG loop with parsing, cleaning, knowledge-base indexing, and a Q&A interface for teams that need fast access to product documentation.',
+                'case.knowledge.result': 'Cut information lookup time by 12x.',
                 'case.redmine.title': 'Tracker data export and normalization',
                 'case.redmine.desc': 'Model and exporter layer for issues, projects, users, time entries, and relations in analysis-, migration-, and reporting-friendly formats.',
+                'case.redmine.result': 'Automated a process that took 8 hours of manual work per week.',
                 'case.dsp.title': 'Remote-control tooling for DSP processors',
                 'case.dsp.desc': 'Driver and examples for audio processor control: levels, mutes, routing matrix, state polling, and device-protocol commands.',
+                'case.dsp.result': 'Included in standard setup process for 40+ installations.',
                 'case.bot.title': 'Product catalog inside Telegram',
                 'case.bot.desc': 'A bot for product search, navigation, and item cards from an external API with local cache and button-driven user flows.',
+                'case.bot.result': 'Processed 2500+ requests in first month without incidents.',
                 'approach.kicker': 'What I Bring',
                 'approach.title': 'I am most useful when “we need to figure this out” has to become a working system.',
                 'cap.discovery.title': 'Discovery without theater',
@@ -434,12 +448,34 @@
         }
 
         const LANG_STORAGE_KEY = 'cv_lang';
+        const THEME_STORAGE_KEY = 'cv_theme';
         const initialLang = localStorage.getItem(LANG_STORAGE_KEY) || 'ru';
         applyI18n(initialLang);
         document.querySelectorAll('.lang-toggle').forEach((btn) => {
             btn.addEventListener('click', () => {
                 localStorage.setItem(LANG_STORAGE_KEY, btn.dataset.lang);
                 applyI18n(btn.dataset.lang);
+            });
+        });
+
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem(THEME_STORAGE_KEY, 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem(THEME_STORAGE_KEY, 'light');
+            }
+            document.querySelectorAll('.theme-toggle').forEach((btn) => {
+                btn.classList.toggle('active', btn.getAttribute('data-theme') === theme);
+            });
+        }
+
+        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+        applyTheme(savedTheme);
+        document.querySelectorAll('.theme-toggle').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                applyTheme(btn.dataset.theme);
             });
         });
 
