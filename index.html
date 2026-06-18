@@ -471,7 +471,7 @@
             });
         }
 
-        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
+        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'dark';
         applyTheme(savedTheme);
         document.querySelectorAll('.theme-toggle').forEach((btn) => {
             btn.addEventListener('click', () => {
