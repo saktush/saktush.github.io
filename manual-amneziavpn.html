@@ -10,130 +10,32 @@
 </head>
 <body class="manual-page">
     <main class="manual-shell">
-        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i><span>Back to main page</span></a>
+        <div class="manual-nav">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i><span data-manual="back">Back to main page</span></a>
+            <div class="manual-controls">
+                <div class="nav-theme">
+                    <button class="theme-toggle" type="button" data-theme="light" aria-label="Light mode" title="Light mode"><i class="fas fa-sun"></i></button>
+                    <button class="theme-toggle" type="button" data-theme="dark" aria-label="Dark mode" title="Dark mode"><i class="fas fa-moon"></i></button>
+                </div>
+                <div class="nav-lang">
+                    <button class="lang-toggle" type="button" data-lang="ru" aria-label="Русский">RU</button>
+                    <button class="lang-toggle" type="button" data-lang="en" aria-label="English">EN</button>
+                </div>
+            </div>
+        </div>
 
         <header class="manual-hero">
-            <p class="section-kicker">Hidden Technical Note</p>
-            <h1>AmneziaVPN Deployment Manual</h1>
-            <p>Аккуратная памятка по созданию отдельного SSH-пользователя для установки AmneziaVPN: ключи, sudo, отключение паролей, проверка и наблюдение за логами.</p>
+            <p class="section-kicker" data-manual="kicker">Hidden Technical Note</p>
+            <h1 data-manual="title">AmneziaVPN Deployment Manual</h1>
+            <p data-manual="intro">Аккуратная памятка по созданию отдельного SSH-пользователя для установки AmneziaVPN.</p>
         </header>
 
-        <section class="manual-checklist" aria-label="Prerequisites">
-            <div><strong>Нужно заранее</strong><span>VPS с root-доступом, IP сервера, локальный macOS/Linux терминал.</span></div>
-            <div><strong>Цель</strong><span>Отдельный пользователь `amnezia_user`, вход только по ключу, sudo без пароля для установки.</span></div>
-            <div><strong>Проверка</strong><span>`ssh -i ~/.ssh/amnezia_key amnezia_user@your_server_ip` и `sudo whoami`.</span></div>
-        </section>
+        <section class="manual-checklist bento-grid" aria-label="Prerequisites"><!-- rendered from data/manual.js --></section>
 
-        <section class="manual-section">
-            <div class="manual-step">
-                <span>01</span>
-                <div>
-                    <h2>Локальная машина</h2>
-                    <p>Генерируем ED25519-ключ и копируем публичную часть на сервер. Если ключ уже есть, этот шаг можно пропустить или выбрать другое имя файла.</p>
-                </div>
-            </div>
-            <div class="terminal-block">
-                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
-                <pre><code>ssh-keygen -t ed25519 -f ~/.ssh/amnezia_key
-ssh-copy-id -i ~/.ssh/amnezia_key.pub root@your_server_ip</code></pre>
-            </div>
-        </section>
-
-        <section class="manual-section">
-            <div class="manual-step">
-                <span>02</span>
-                <div>
-                    <h2>Сервер под root</h2>
-                    <p>Создаём отдельного пользователя, даём sudo без пароля, переносим authorized keys и отключаем вход по паролю во всех SSH-конфигах.</p>
-                </div>
-            </div>
-            <div class="terminal-block">
-                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
-                <pre><code>adduser amnezia_user
-usermod -aG sudo amnezia_user
-echo "amnezia_user ALL=(ALL) NOPASSWD: ALL" | tee /etc/sudoers.d/amnezia_user
-
-mkdir -p /home/amnezia_user/.ssh
-cp /root/.ssh/authorized_keys /home/amnezia_user/.ssh/
-chown -R amnezia_user:amnezia_user /home/amnezia_user/.ssh
-chmod 700 /home/amnezia_user/.ssh
-chmod 600 /home/amnezia_user/.ssh/authorized_keys
-
-sed -i 's/^PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
-find /etc/ssh/sshd_config.d/ -type f -exec sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' {} +
-systemctl restart ssh</code></pre>
-            </div>
-            <aside class="manual-note">
-                <strong>Safety note</strong>
-                <p>Не закрывай текущую root-сессию, пока не проверишь вход новым пользователем в отдельном терминале. Так проще восстановиться, если SSH-конфиг применился не так.</p>
-            </aside>
-        </section>
-
-        <section class="manual-section">
-            <div class="manual-step">
-                <span>03</span>
-                <div>
-                    <h2>Проверка доступа</h2>
-                    <p>Заходим с конкретным ключом и проверяем, что sudo не спрашивает пароль. Ожидаемый ответ на `sudo whoami` — `root`.</p>
-                </div>
-            </div>
-            <div class="terminal-block">
-                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
-                <pre><code>ssh -i ~/.ssh/amnezia_key amnezia_user@your_server_ip
-sudo whoami</code></pre>
-            </div>
-            <aside class="manual-note accent">
-                <strong>AmneziaVPN app</strong>
-                <p>При добавлении сервера укажи пользователя `amnezia_user` и приватный ключ `~/.ssh/amnezia_key`.</p>
-            </aside>
-        </section>
-
-        <section class="manual-section">
-            <div class="manual-step">
-                <span>04</span>
-                <div>
-                    <h2>Наблюдение за установкой</h2>
-                    <p>Во время установки удобно смотреть системные логи авторизации и SSH. Почти все действия установки проходят через sudo.</p>
-                </div>
-            </div>
-            <div class="terminal-block">
-                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
-                <pre><code>sudo journalctl -f -u ssh | grep sudo
-sudo tail -f /var/log/auth.log</code></pre>
-            </div>
-        </section>
-
-        <section class="manual-section">
-            <div class="manual-step">
-                <span>05</span>
-                <div>
-                    <h2>Мини-rollback</h2>
-                    <p>Если нужно временно вернуть парольный вход, делай это только из уже открытой root-сессии и сразу после проверки причины.</p>
-                </div>
-            </div>
-            <div class="terminal-block">
-                <button class="copy-code" type="button"><i class="fas fa-copy"></i><span>Copy</span></button>
-                <pre><code>sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config
-systemctl restart ssh</code></pre>
-            </div>
-        </section>
+        <div class="manual-steps"><!-- rendered from data/manual.js --></div>
     </main>
 
-    <script>
-        document.querySelectorAll('.copy-code').forEach((button) => {
-            button.addEventListener('click', async () => {
-                const code = button.parentElement.querySelector('code').textContent;
-                const label = button.querySelector('span');
-                const oldText = label.textContent;
-                try {
-                    await navigator.clipboard.writeText(code);
-                    label.textContent = 'Copied';
-                    setTimeout(() => { label.textContent = oldText; }, 1200);
-                } catch (_) {
-                    window.prompt('Copy command:', code);
-                }
-            });
-        });
-    </script>
+    <script src="data/manual.js"></script>
+    <script src="scripts/manual.js"></script>
 </body>
 </html>
